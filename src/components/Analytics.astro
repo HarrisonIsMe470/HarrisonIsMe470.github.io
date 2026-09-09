@@ -1,0 +1,4 @@
+---
+import { analyticsURL } from '../lib/services';
+---
+{import.meta.env.PROD && analyticsURL && <script is:inline data-goatcounter={`${analyticsURL}/count`} async src="https://gc.zgo.at/count.js"></script>}

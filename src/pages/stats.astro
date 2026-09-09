@@ -1,0 +1,7 @@
+---
+import Page from '../layouts/Page.astro';
+import { analyticsURL } from '../lib/services';
+---
+<Page title="Visitors · Harrison’s Journal" description="Daily visits and visitor trends for Harrison’s Journal."><p class="eyebrow">People stopping by</p><h1>Visitor statistics<span class="accent">.</span></h1><p class="lede">A small window into how this journal is growing.</p>
+<section><h2>Daily visitors & trends</h2>{analyticsURL ? <><p>The live chart below shows visitor activity collected by GoatCounter. Use its date controls to explore the trend over time.</p><iframe class="stats-frame" src={analyticsURL} title="GoatCounter daily visitor statistics and trend chart" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe><p>If the chart doesn’t load, <a href={analyticsURL}>open the visitor dashboard ↗</a>.</p></> : <div class="notice"><h3>No visitor data yet</h3><p>The visitor chart will appear here once analytics is connected. No sample counts are shown.</p></div>}</section>
+<section class="about-section"><h2>About these numbers</h2><p>This site uses GoatCounter when analytics is enabled. It counts visits without tracking cookies. Visitor counts are estimates, and blockers can prevent a visit from being counted. The public dashboard contains aggregate statistics, not a list of readers.</p><p><a href="https://www.goatcounter.com/help/privacy">GoatCounter’s privacy policy ↗</a></p></section></Page>

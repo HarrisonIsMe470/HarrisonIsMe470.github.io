@@ -1,0 +1,17 @@
+---
+import { commentsEnabled, giscus } from '../lib/services';
+---
+<section class="comments" aria-labelledby="comments-title" id="comments">
+  <p class="eyebrow">A little conversation</p>
+  <h2 id="comments-title">Like this post & leave a comment</h2>
+  {commentsEnabled ? <>
+    <p>Use the 👍 reaction below to like this post. Likes and comments are saved with your GitHub account.</p>
+    <div class="giscus"></div>
+    <script is:inline src="https://giscus.app/client.js" data-repo={giscus.repo} data-repo-id={giscus.repoId}
+      data-category={giscus.category} data-category-id={giscus.categoryId} data-mapping="pathname" data-strict="1"
+      data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light"
+      data-lang="en" data-loading="lazy" crossorigin="anonymous" async></script>
+    <p class="small">If the discussion doesn’t load, <a href={`https://github.com/${giscus.repo}/discussions`}>visit GitHub Discussions</a>.</p>
+    <noscript>Enable JavaScript to like or comment here, or use the GitHub Discussions link above.</noscript>
+  </> : <div class="notice"><button disabled type="button">♡ Like</button><p>Likes and comments are not available yet. Please check back soon.</p></div>}
+</section>

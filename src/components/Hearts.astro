@@ -1,0 +1,25 @@
+<script>
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let lastClick = 0;
+  document.addEventListener('click', (event) => {
+    if (motion.matches || event.detail === 0 || performance.now() - lastClick < 120) return;
+    lastClick = performance.now();
+    for (let i = 0; i < 6; i++) {
+      const heart = document.createElement('span');
+      heart.textContent = '♥';
+      heart.className = 'click-heart';
+      heart.setAttribute('aria-hidden', 'true');
+      heart.style.left = `${event.clientX}px`;
+      heart.style.top = `${event.clientY}px`;
+      document.body.append(heart);
+      const angle = (Math.PI * 2 * i) / 6;
+      const distance = 32 + Math.random() * 36;
+      const animation = heart.animate([
+        { transform: 'translate(-50%, -50%) scale(.5)', opacity: 1 },
+        { transform: `translate(calc(-50% + ${Math.cos(angle) * distance}px), calc(-50% + ${Math.sin(angle) * distance - 25}px)) scale(1.1) rotate(${i * 18 - 45}deg)`, opacity: 0 }
+      ], { duration: 650, easing: 'ease-out' });
+      animation.onfinish = () => heart.remove();
+      animation.oncancel = () => heart.remove();
+    }
+  });
+</script>
