@@ -12,5 +12,4 @@ export const books: Book[] = [...legacyProfile.books];
 export interface BucketItem { text: string; completed: boolean; }
 export const bucketList: BucketItem[] = [
   ...legacyProfile.bucketList,
-  { text: 'Build a personal universe on the internet', completed: false },
 ];

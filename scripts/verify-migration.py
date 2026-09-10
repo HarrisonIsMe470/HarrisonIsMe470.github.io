@@ -104,6 +104,9 @@ for node in original_about.select('li,p'):
     if node.name == 'p' and node.find('code') and '2025/10/21' in node.get_text():
         continue
     text=normalized_text(node)
+    # The visitor-statistics TODO was renamed by request after migration.
+    if text == 'Findavisitorstatsticsplugin':
+        text = 'Addavisualvisitorstatistics'
     assert text in normalized_text(about), ('About text missing',node.get_text())
 for heading in original_about.select('h1[id]'):
     assert about.find(id=heading['id']), ('Missing About anchor',heading['id'])
