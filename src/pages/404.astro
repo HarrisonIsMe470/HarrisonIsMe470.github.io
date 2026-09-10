@@ -1,0 +1,15 @@
+---
+import Page from '../layouts/Page.astro';
+---
+<Page title="Page not found · Harrison’s Journal" description="This page may have moved.">
+  <h1>Page not found</h1>
+  <p>The old About page has moved to <a href="/about/">About me</a>.</p>
+  <p>You can also <a href="/blog/">browse all posts</a>.</p>
+</Page>
+<script>
+  // GitHub Pages paths are case-sensitive; default macOS filesystems are not.
+  // Use its 404 fallback instead of emitting an About/ directory over about/.
+  if (['/About', '/About/', '/About/index.html'].includes(location.pathname)) {
+    location.replace('/about/' + location.search + location.hash);
+  }
+</script>

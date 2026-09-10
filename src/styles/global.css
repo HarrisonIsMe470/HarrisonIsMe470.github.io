@@ -486,3 +486,17 @@ button:disabled {
     display:none;
   }
 }
+
+/* Recovered article HTML retains its original heading IDs, table and code markup. */
+.legacy-content h1 { font-size: 2rem; margin-top: 1.8em; }
+.legacy-content .headerlink { scroll-margin-top: 1rem; }
+.legacy-content pre { background: var(--soft); color: var(--ink); }
+.legacy-content img { display: block; margin: 1.5rem auto; }
+.katex-display { overflow-x: auto; overflow-y: hidden; padding: .4rem 0; }
+.music-list { list-style: none; padding: 0; }
+.music-list li { display: flex; gap: 24px; border-top: 1px solid var(--line); padding: 28px 0; }
+.music-list img { width: 96px; height: 96px; object-fit: cover; }
+.music-list h2 { font-size: 1.4rem; }
+.music-list audio { max-width: 100%; }
+.music-list li > div { min-width: 0; }
+@media (max-width: 480px) { .music-list li { flex-direction: column; } }

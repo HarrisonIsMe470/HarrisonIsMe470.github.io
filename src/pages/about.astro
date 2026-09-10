@@ -1,10 +1,13 @@
 ---
 import Page from '../layouts/Page.astro';
 import { profile, books, bucketList } from '../data/profile';
+import legacyProfile from '../data/legacy-profile.json';
+import LegacyAbout from '../components/LegacyAbout.astro';
 ---
 <Page title="About · Harrison’s Journal" description="A little about Harrison, books read, and things still to do.">
 <p class="eyebrow">Behind the journal</p><h1>About me<span class="accent">.</span></h1>
-<section class="about-intro"><img class="avatar" src={profile.avatar} width="160" height="160" alt={`${profile.name}’s monogram avatar`} /><div><h2>Introduction</h2><p>{profile.introduction}</p><a href="https://github.com/HarrisonIsMe470">Find me on GitHub ↗</a></div></section>
+<section class="about-intro"><img class="avatar" src={profile.avatar} width="160" height="160" alt={`${profile.name}’s avatar`} /><div><h2>Introduction</h2><p>{profile.introduction}</p><a href="https://github.com/HarrisonIsMe470">Find me on GitHub ↗</a></div></section>
 <section class="about-section"><p class="eyebrow">On the bookshelf</p><h2>Books I have read</h2>{books.length ? <ul class="book-list">{books.map(book => <li><h3>{book.url ? <a href={book.url}>{book.title}</a> : book.title}</h3><p>{book.author}{book.finished && ` · Finished ${book.finished}`}</p>{book.note && <p>{book.note}</p>}</li>)}</ul> : <p>My reading list is coming soon. There’s always room for another good book.</p>}</section>
-<section class="about-section"><p class="eyebrow">A list for a lifetime</p><h2>Things I want to do in my life</h2><ul class="bucket-list">{bucketList.map(item => <li><span class:list={['check', { done: item.completed }]} aria-label={item.completed ? 'Completed' : 'Still to do'}>{item.completed ? '✓' : '○'}</span><span class:list={{ completed: item.completed }}>{item.text}</span></li>)}</ul></section>
+<section class="about-section"><p class="eyebrow">A list for a lifetime</p><h2 id={legacyProfile.bucketAnchor}>Things I want to do in my life</h2><p>{legacyProfile.bucketTitle}</p><ul class="bucket-list">{bucketList.map(item => <li><span class:list={['check', { done: item.completed }]} aria-label={item.completed ? 'Completed' : 'Still to do'}>{item.completed ? '✓' : '○'}</span><span class:list={{ completed: item.completed }}>{item.text}</span></li>)}</ul></section>
+<LegacyAbout />
 </Page>

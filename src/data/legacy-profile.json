@@ -1,0 +1,38 @@
+{
+  "introduction": "👋 Hi, my friend. I’m Chino520.",
+  "bucketList": [
+    {
+      "text": "Read A Common-Sense Guide to Data Structures and Algorithms (100%)",
+      "completed": true
+    },
+    {
+      "text": "Learn some Macroeconomics (Have read Principles of Economics by N. Gregory Mankiw)",
+      "completed": true
+    },
+    {
+      "text": "Go to maid coffee",
+      "completed": false
+    },
+    {
+      "text": "Learn something about EBP, CBT and Stoicism (Have learned 情绪EBP)",
+      "completed": true
+    },
+    {
+      "text": "Build an automated dlsite translation AI system",
+      "completed": false
+    }
+  ],
+  "books": [
+    {
+      "title": "A Common-Sense Guide to Data Structures and Algorithms",
+      "author": ""
+    },
+    {
+      "title": "Principles of Economics",
+      "author": "N. Gregory Mankiw"
+    }
+  ],
+  "introAnchor": "👋-Hi-my-friend-I’m-Chino520",
+  "bucketAnchor": "🎯-Before-I-die-I-want-to…",
+  "bucketTitle": "🎯 Before I die, I want to…"
+}

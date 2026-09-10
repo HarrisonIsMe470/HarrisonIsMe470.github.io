@@ -12,7 +12,7 @@ Existing Markdown/MDX content, images, fonts, and the Astro architecture are ret
 The five original starter posts are now drafts; `welcome.md` is the initial public post.
 Replace the introductory copy and monogram avatar with your own details.
 
-No new npm dependencies were added. Existing dependencies serve these purposes:
+The initial site reused the starter dependencies. Content migration adds KaTeX for the recovered mathematical formulas. Dependencies serve these purposes:
 
 | Package/service | Purpose and reason |
 | --- | --- |
@@ -21,6 +21,7 @@ No new npm dependencies were added. Existing dependencies serve these purposes:
 | `@astrojs/rss` | Existing RSS feed at `/rss.xml`. |
 | `@astrojs/sitemap` | Existing official integration for sitemap generation. |
 | `sharp` | Existing local image processing used by Astro. |
+| `katex` | Renders the recovered LaTeX formulas without restoring the old theme runtime. |
 | Giscus | Comments **and Like buttons/counts** using GitHub Discussion reactions. One service handles both, with GitHub account-based persistence. |
 | GoatCounter | Hosted visitor collection and an embedded live chart; no local database, API token, chart dependency, or scheduled rebuild needed. |
 
@@ -187,8 +188,7 @@ See [session semantics](https://www.goatcounter.com/help/sessions) and
 
 ## Maintain About and Projects
 
-Edit `src/data/profile.ts` for the introduction and avatar path. The initial avatar
-is a local **h.** monogram, not a claimed photo. Put your photo in `public/images/`
+Edit `src/data/profile.ts` for the introduction and avatar path. The avatar now uses the image recovered from the old blog; the original **h.** monogram file is retained. Put your photo in `public/images/`
 and update the path and image alt text in `src/pages/about.astro`.
 
 Add books to `books`, for example:
@@ -198,8 +198,7 @@ Add books to `books`, for example:
   note: 'Your thoughts', url: 'https://example.com/book' }
 ```
 
-Only `title` and `author` are required. The initial list is empty so it does not
-invent a reading history. Add bucket-list items as
+Only `title` and `author` are required. The list includes two completed books explicitly named in the old About page. Add bucket-list items as
 `{ text: 'Your ambition', completed: false }`; change `completed` to `true` to mark
 one done. These are author-maintained data, not browser-persisted checkboxes.
 
@@ -319,3 +318,133 @@ completed/verified. The existing live domain response does not verify the new bu
 - Leave a comment and find it in the matching GitHub Discussion.
 - Open `/stats/` signed out and confirm that the live daily chart is visible.
 - Confirm the Actions deployment completed and the custom domain shows this blog.
+
+## Content Migration
+
+本次从 `git@github.com:HarrisonIsMe470/HarrisonIsMe470-old-blog.git` 的 `main`
+迁入内容，来源提交为 `ea1ba1abb8733b2cd81798a77ece90e4b1876e8f`。
+完整报告见 [migration/REPORT.md](migration/REPORT.md)，逐文件分类、SHA-256、文章元数据和
+旧新 URL 对照见 [migration/manifest.json](migration/manifest.json)。旧仓库临时副本位于
+`/private/tmp/HarrisonIsMe470-old-blog`；网站构建不依赖这个临时目录。
+
+### 迁移范围与目录
+
+旧仓库是 Hexo 的发布产物，**没有原始 Markdown/MDX**。因此提取 HTML 中的文章正文，
+而不是复制旧主题页面或重新编写文章。11 篇文章全部迁入；保留新站原来的 6 篇内容条目，
+合计 17 篇，其中公开 12 篇、原有示例草稿 5 篇。
+
+| 旧路径/内容 | 新路径/处理 |
+| --- | --- |
+| `2025/MM/DD/<slug>/index.html` 中的正文 | `src/content/blog/legacy/<slug>.md` |
+| 文章标题、日期、标签、作者、首页摘要 | 同一 `.md` 的 frontmatter |
+| `2025/**` 中的 25 张文章图片 | `public/2025/**`，保留原 URL |
+| `images/` 中的 20 个图片资源 | `public/images/`，包括头像、背景、音乐封面、原 loading GIF |
+| `music/` 中的 10 首 MP3 | `public/music/`，保留原文件名和 URL |
+| 原 APlayer 歌单元数据 | `src/data/music.json`，在 `/music/` 用原生音频控件展示 |
+| About 简介、5 个目标及完成状态、2 本已读书 | `src/data/legacy-profile.json`，并入当前 `profile.ts` |
+| About 更新历史和 3 个博客待办 | `src/content/pages/legacy-about.html`，显示在当前 `/about/` |
+| 旧站名称、INTJ、Meow~、联系方式、友情链接 | `src/data/legacy-site.json`，显示在 About |
+| 11 个旧文章 URL | 静态跳转到对应 `/blog/<slug>/` |
+| 原归档、标签列表、分页 | 跳转到 `/blog/`，不复制旧框架生成页面 |
+| 旧 JS、CSS、Vue、主题、播放器及 Waline 客户端 | 不复制；继续使用当前 Astro 设计和功能 |
+
+没有发现独立 Projects、Resume、Contact 页面、MDX、PDF、视频文件或额外附件。
+人生清单中的项目计划按原文保留为待办，没有虚构成已完成项目。
+新站已有 Projects 数据、组件、评论/点赞、统计和点击爱心功能仍保留。
+
+### 迁移文章格式
+
+迁移文章使用现有 Astro Content Collection。示例：
+
+```yaml
+---
+title: "Katex Guide"
+description: "A simple guide that helps you write mathematical formula using Katex."
+pubDate: "2025-10-29"
+tags: ["Hexo", "Mathematics"]
+categories: []
+author: "Chino520"
+draft: false
+slug: "Katex-Guide"
+legacyHtml: true
+legacyPath: "/2025/10/29/Katex-Guide/"
+math: true
+excerpt: "<p>原站首页摘要 HTML</p>"
+sourceRepository: "HarrisonIsMe470/HarrisonIsMe470-old-blog"
+sourceCommit: "ea1ba1abb8733b2cd81798a77ece90e4b1876e8f"
+---
+```
+
+`legacyHtml: true` 表示下方正文为提取出来的 HTML。文章页面直接输出 `post.body`，
+避免 Markdown 再次解释代码、HTML、反斜杠、公式或已有锚点。只对仓库作者维护的内容
+使用这个开关，不能用来接收访客提交的 HTML。迁移器会拒绝正文中的脚本和事件处理属性。
+保留了原文、代码块、表格、引用、图片、标题 ID 和 `#more` 锚点；没有把正文交给旧主题脚本。
+
+原站只展示了日历日期，没有每篇文章的精确更新时间、原始草稿标记或明确封面字段，
+所以不伪造这些元数据。`draft: false` 来自其已发布状态；`categories: []` 表示源 HTML
+未显示分类。保留可恢复的完整首页摘要为 `excerpt`，`description` 使用摘要文本；纯图片
+摘要则以原文章标题作为描述。原始发布时间的时分秒和未发布草稿无法从这个发布仓库恢复。
+
+新增 KaTeX npm 依赖用于原文的公式。`math: true` 启用按需加载的自动渲染，支持
+`$...$`、`$$...$$`、`\(...\)`、`\[...\]`，跳过 `pre` 和 `code`，因此教程里的代码
+示例仍保持原样。CSS/字体由本项目构建输出，不依赖旧站的 CDN、Vue 或 Hexo 脚本。
+JavaScript 被禁用时公式的 TeX 原文仍可阅读。
+
+### 维护新文章与资源
+
+1. 普通新文章放在 `src/content/blog/`；迁入的旧文章集中在 `src/content/blog/legacy/`。
+2. 使用普通 Markdown/MDX，不要给新文章添加 `legacyHtml: true`，除非确实维护 HTML 正文。
+3. 必填 `title`、`description`、`pubDate`；可选 `updatedDate`、`tags`、`categories`、
+   `author`、`draft`、`heroImage`、`slug`、`math`。完整普通文章示例见上方 “Add a blog post”。
+4. 新图片建议放 `src/assets/`（Astro 优化）或 `public/images/blog/`（原样发布）。
+   迁入图片继续放在原路径，避免破坏旧图片外链。
+5. `slug` 明确控制 URL，保留大小写、中文和已有空格。链接到包含空格的 URL 时需编码
+   为 `%20`。不要随意改动已发布 slug，否则文章旧链接和 Giscus 的 pathname 映射会变化。
+6. 原始 `excerpt` 可保留 HTML，普通描述 `description` 应写纯文本。现有列表使用描述。
+
+```bash
+npm install
+npm run dev -- --background
+npm run astro -- dev status
+npm run astro -- dev logs
+npm run build
+npm run preview
+```
+
+默认开发地址为 `http://localhost:4321`；具体以命令输出为准。
+迁移完成后照旧提交源文件和 `package-lock.json`，push 到 `main`，由已有
+**Deploy Astro to GitHub Pages** workflow 构建并部署 `dist/`。
+Pages 的 Source 仍应为 **GitHub Actions**，Custom domain 仍为 `chino520.xyz`。
+迁移没有更改 workflow、Astro 的 site/base、CNAME、remote 或 Git 历史。
+
+### 旧 URL 与迁移验证
+
+`src/data/legacy-redirects.json` 保存所有旧新路径映射；
+`src/pages/[...legacy].astro` 生成带 canonical、meta refresh 和可点击链接的静态跳转页。
+JavaScript 跳转保留查询参数及原锚点。GitHub Pages 静态部署无法提供自定义 HTTP 301。
+
+`/About/` 与 `/about/` 仅大小写不同，macOS 默认文件系统不能安全地同时生成两个目录。
+因此使用 `404.astro` 对 `/About`、`/About/`、`/About/index.html` 执行跳转；原 About
+标题锚点保留在新页。该特例先收到 HTTP 404，需要 JavaScript 自动跳转，无脚本时可点击
+404 页中的 About 链接。其他 28 个旧路径均有实际静态跳转文件。
+
+验证工具（仅维护/审计需要 Python 和 `beautifulsoup4`，正常 Astro 构建不需要）：
+
+```bash
+# 如本机没有 BeautifulSoup，可在临时虚拟环境里安装：
+python3 -m venv /tmp/blog-migration-tools
+/tmp/blog-migration-tools/bin/pip install beautifulsoup4
+npm run build
+/tmp/blog-migration-tools/bin/python scripts/verify-migration.py /private/tmp/HarrisonIsMe470-old-blog
+node scripts/verify-math.mjs
+```
+
+`verify-migration.py` 核对全部 94 个源文件的分类、11 篇正文、代码/表格/引用、图片引用、
+55 个资源的哈希、旧新 URL、About 完成状态、构建后的本地链接及部署配置不变。
+`import-legacy-blog.py` 是首次恢复脚本，已有目标文件会报冲突并停止，不应直接重复导入
+覆盖后续编辑。正文变更后应人工审阅差异，不要为了让原始迁移校验通过而还原有效修改。
+
+旧 Waline 的评论位于外部服务，不在旧 Git 仓库中；本次未迁移远端评论数据库。
+来源服务地址记录在 manifest，若还需要迁移评论，需另行提供服务端导出。
+文章里的外部参考链接和原有示例占位 URL 保持原样；本次验证保证本地路径有效，
+不承诺第三方站点、视频或外部账户当前可用。

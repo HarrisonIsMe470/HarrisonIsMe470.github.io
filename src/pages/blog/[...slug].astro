@@ -13,9 +13,12 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<'blog'>;
 
 const post = Astro.props;
-const { Content } = await render(post);
+// The old repository contains rendered HTML only. Avoid interpreting its code
+// examples and TeX a second time as Markdown; normal posts still use render().
+const rendered = post.data.legacyHtml ? null : await render(post);
+const Content = rendered?.Content;
 ---
 
 <BlogPost {...post.data}>
-	<Content />
+	{post.data.legacyHtml ? <Fragment set:html={post.body ?? ''} /> : Content && <Content />}
 </BlogPost>

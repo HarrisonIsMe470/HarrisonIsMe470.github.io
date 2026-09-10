@@ -1,0 +1,22 @@
+---
+import 'katex/dist/katex.min.css';
+---
+<script>
+  const elements = document.querySelectorAll<HTMLElement>('[data-math="true"]');
+  if (elements.length) {
+    const { default: renderMathInElement } = await import('katex/contrib/auto-render');
+    elements.forEach(element => renderMathInElement(element, {
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+        { left: '\\(', right: '\\)', display: false },
+        { left: '\\[', right: '\\]', display: true },
+      ],
+      throwOnError: false,
+      trust: false,
+      strict: false, // Preserve the original Chinese labels inside formulas.
+      // Preserve the literal examples in the Markdown/LaTeX tutorials.
+      ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code', 'option'],
+    }));
+  }
+</script>

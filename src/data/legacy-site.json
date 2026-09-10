@@ -1,0 +1,28 @@
+{
+  "title": "Chino520's Universe",
+  "subtitle": "INTJ",
+  "description": "Enjoy your music :)",
+  "name": "Chino520",
+  "bio": "Meow~",
+  "avatar": "/images/avatar.jpg",
+  "contacts": [
+    {
+      "label": "GitHub (旧账号)",
+      "url": "https://github.com/Chino520Real"
+    },
+    {
+      "label": "Email",
+      "url": "mailto:chino520forever@gmail.com"
+    },
+    {
+      "label": "Bilibili",
+      "url": "https://space.bilibili.com/1876361"
+    }
+  ],
+  "friends": [
+    {
+      "name": "Argvchs",
+      "url": "https://argvchs.github.io"
+    }
+  ]
+}

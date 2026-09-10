@@ -1,0 +1,234 @@
+[
+  {
+    "tex": "\\Rightarrow",
+    "display": false
+  },
+  {
+    "tex": "\\to",
+    "display": false
+  },
+  {
+    "tex": "\\to",
+    "display": false
+  },
+  {
+    "tex": "\\to",
+    "display": false
+  },
+  {
+    "tex": "\\to",
+    "display": false
+  },
+  {
+    "tex": "\\to",
+    "display": false
+  },
+  {
+    "tex": "\\to",
+    "display": false
+  },
+  {
+    "tex": "\\to",
+    "display": false
+  },
+  {
+    "tex": "p=p_0",
+    "display": false
+  },
+  {
+    "tex": "q_1>q_0",
+    "display": false
+  },
+  {
+    "tex": "p=p_0",
+    "display": false
+  },
+  {
+    "tex": "q_1>q_0",
+    "display": false
+  },
+  {
+    "tex": " 需求价格弹性 = \\frac{需求量变动的百分比}{价格变动的百分比} ",
+    "display": true
+  },
+  {
+    "tex": "(Q_1, P_1)",
+    "display": false
+  },
+  {
+    "tex": "(Q_2, P_2)",
+    "display": false
+  },
+  {
+    "tex": " 需求价格弹性 = \\frac{\\frac{Q_2 - Q_1}{(Q_2 + Q_1) / 2}}{\\frac{P_2 - P_1}{(P_2 + P_1) / 2}} ",
+    "display": true
+  },
+  {
+    "tex": "需求价格弹性 = 0",
+    "display": false
+  },
+  {
+    "tex": "需求价格弹性 < 1",
+    "display": false
+  },
+  {
+    "tex": "需求价格弹性 = 1",
+    "display": false
+  },
+  {
+    "tex": "需求价格弹性 > 1",
+    "display": false
+  },
+  {
+    "tex": "需求价格弹性 = \\infty ",
+    "display": false
+  },
+  {
+    "tex": " 需求收入弹性 = \\frac{需求量变动的百分比}{收入变动的百分比} ",
+    "display": true
+  },
+  {
+    "tex": " 需求价格弹性 = \\frac{物品1的需求量变动百分比}{物品2的价格变动百分比} ",
+    "display": true
+  },
+  {
+    "tex": " 供给价格弹性 = \\frac{供给量变动的百分比}{价格变动的百分比} ",
+    "display": true
+  },
+  {
+    "tex": "供给价格弹性 = 0",
+    "display": false
+  },
+  {
+    "tex": "供给价格弹性 < 1",
+    "display": false
+  },
+  {
+    "tex": "供给价格弹性 = 1",
+    "display": false
+  },
+  {
+    "tex": "供给价格弹性 > 1",
+    "display": false
+  },
+  {
+    "tex": "供给价格弹性 = \\infty ",
+    "display": false
+  },
+  {
+    "tex": "\\Rightarrow",
+    "display": false
+  },
+  {
+    "tex": "\\Rightarrow",
+    "display": false
+  },
+  {
+    "tex": "S \\to S^’",
+    "display": false
+  },
+  {
+    "tex": "D",
+    "display": false
+  },
+  {
+    "tex": "\\Rightarrow",
+    "display": false
+  },
+  {
+    "tex": "P_1 \\to P_2",
+    "display": false
+  },
+  {
+    "tex": "Q_1 \\to Q_2",
+    "display": false
+  },
+  {
+    "tex": "\\Rightarrow",
+    "display": false
+  },
+  {
+    "tex": "S_{Q_1Q_2E_2X} < S_{P_1P_2E_1X}",
+    "display": false
+  },
+  {
+    "tex": "\\Rightarrow",
+    "display": false
+  },
+  {
+    "tex": "\\Rightarrow",
+    "display": false
+  },
+  {
+    "tex": "\\Rightarrow",
+    "display": false
+  },
+  {
+    "tex": "\\Rightarrow",
+    "display": false
+  },
+  {
+    "tex": "\\Rightarrow",
+    "display": false
+  },
+  {
+    "tex": "\\Rightarrow",
+    "display": false
+  },
+  {
+    "tex": "\\Rightarrow",
+    "display": false
+  },
+  {
+    "tex": "\\Rightarrow",
+    "display": false
+  },
+  {
+    "tex": "\\Rightarrow",
+    "display": false
+  },
+  {
+    "tex": "\\Rightarrow",
+    "display": false
+  },
+  {
+    "tex": "\\Rightarrow",
+    "display": false
+  },
+  {
+    "tex": "\\Rightarrow",
+    "display": false
+  },
+  {
+    "tex": "\\Rightarrow",
+    "display": false
+  },
+  {
+    "tex": "O(2^N)",
+    "display": false
+  },
+  {
+    "tex": "(2N)-1",
+    "display": false
+  },
+  {
+    "tex": "O(N)",
+    "display": false
+  },
+  {
+    "tex": "O(N)",
+    "display": false
+  },
+  {
+    "tex": "\\text{E} = \\text{mc}^2",
+    "display": false
+  },
+  {
+    "tex": "\\sum_{n=1}^\\infty \\frac{1}{n^2} = \\frac{\\pi^2}{6}",
+    "display": true
+  },
+  {
+    "tex": "\\infty ",
+    "display": false
+  }
+]

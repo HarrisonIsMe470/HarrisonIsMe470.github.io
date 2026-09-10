@@ -1,0 +1,18 @@
+---
+import Page from '../layouts/Page.astro';
+import playlist from '../data/music.json';
+---
+<Page title="Music · Harrison’s Journal" description="Enjoy your music :)">
+  <p class="eyebrow">From Chino520’s Universe</p>
+  <h1>Enjoy your music :)</h1>
+  <ul class="music-list">
+    {playlist.map(track => <li>
+      <img src={track.cover} width="96" height="96" alt={`${track.name} cover`} loading="lazy" />
+      <div><h2>{track.name}</h2><p>{track.artist}</p>
+        <audio controls preload="none" src={track.url} aria-label={`${track.name} — ${track.artist}`}>
+          <a href={track.url}>Download audio</a>
+        </audio>
+      </div>
+    </li>)}
+  </ul>
+</Page>

@@ -10,6 +10,16 @@ const blog = defineCollection({
 		z.object({
 			title: z.string(),
 			tags: z.array(z.string()).default([]),
+            categories: z.array(z.string()).default([]),
+            author: z.string().optional(),
+            excerpt: z.string().optional(),
+            slug: z.string().optional(),
+            // Recovered HTML is author-controlled content, never visitor input.
+            legacyHtml: z.boolean().default(false),
+            legacyPath: z.string().optional(),
+            math: z.boolean().default(false),
+            sourceRepository: z.string().optional(),
+            sourceCommit: z.string().optional(),
 			draft: z.boolean().default(false),
 			description: z.string(),
 			// Transform string to Date object

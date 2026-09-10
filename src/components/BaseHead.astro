@@ -13,7 +13,8 @@ interface Props {
 	image?: ImageMetadata;
 }
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const isNotFound = Astro.url.pathname === '/404/' || Astro.url.pathname === '/404.html';
+const canonicalURL = new URL(isNotFound ? '/404.html' : Astro.url.pathname, Astro.site);
 
 const { title, description, image = FallbackImage } = Astro.props;
 ---
@@ -35,6 +36,7 @@ const { title, description, image = FallbackImage } = Astro.props;
 <Font cssVariable="--font-atkinson" preload />
 
 <!-- Canonical URL -->
+{isNotFound && <meta name="robots" content="noindex" />}
 <link rel="canonical" href={canonicalURL} />
 
 <!-- Primary Meta Tags -->

@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Jay",
+    "artist": "Lukrembo",
+    "url": "/music/Lukrembo - Jay (freetouse.com).mp3",
+    "cover": "/images/Lukrembo - Jay (freetouse.com).webp"
+  },
+  {
+    "name": "Another Kid & Pratzapp",
+    "artist": "Kyoto",
+    "url": "/music/Another Kid & Pratzapp - Kyoto (freetouse.com).mp3",
+    "cover": "/images/Another Kid & Pratzapp - Kyoto (freetouse.com).webp"
+  },
+  {
+    "name": "Avanti",
+    "artist": "Time",
+    "url": "/music/Avanti - Time (freetouse.com).mp3",
+    "cover": "/images/Avanti - Time (freetouse.com).webp"
+  },
+  {
+    "name": "Aventure",
+    "artist": "A Beautiful Garden",
+    "url": "/music/Aventure - A Beautiful Garden (freetouse.com).mp3",
+    "cover": "/images/Aventure - A Beautiful Garden (freetouse.com).webp"
+  },
+  {
+    "name": "Filo Starquez",
+    "artist": "Park Vibes",
+    "url": "/music/Filo Starquez - Park Vibes (freetouse.com).mp3",
+    "cover": "/images/Filo Starquez - Park Vibes (freetouse.com).webp"
+  },
+  {
+    "name": "Hazelwood",
+    "artist": "Coming Of Age",
+    "url": "/music/Hazelwood - Coming Of Age (freetouse.com).mp3",
+    "cover": "/images/Hazelwood - Coming Of Age (freetouse.com).webp"
+  },
+  {
+    "name": "Hoffy Beats",
+    "artist": "Florida Keys",
+    "url": "/music/Hoffy Beats - Florida Keys (freetouse.com).mp3",
+    "cover": "/images/Hoffy Beats - Florida Keys (freetouse.com).webp"
+  },
+  {
+    "name": "massobeats",
+    "artist": "daydream",
+    "url": "/music/massobeats - daydream (freetouse.com).mp3",
+    "cover": "/images/massobeats - daydream (freetouse.com).webp"
+  },
+  {
+    "name": "massobeats",
+    "artist": "gingersweet",
+    "url": "/music/massobeats - gingersweet (freetouse.com).mp3",
+    "cover": "/images/massobeats - gingersweet (freetouse.com).webp"
+  },
+  {
+    "name": "Milky Wayvers",
+    "artist": "Love in Japan",
+    "url": "/music/Milky Wayvers - Love in Japan (freetouse.com).mp3",
+    "cover": "/images/Milky Wayvers - Love in Japan (freetouse.com).webp"
+  }
+]

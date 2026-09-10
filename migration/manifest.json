@@ -1,0 +1,1217 @@
+{
+  "sourceRepository": "git@github.com:HarrisonIsMe470/HarrisonIsMe470-old-blog.git",
+  "sourceCommit": "ea1ba1abb8733b2cd81798a77ece90e4b1876e8f",
+  "articles": [
+    {
+      "source": "2025/10/21/Deploying-Hexo-on-GitHub-using-Arch Linux/index.html",
+      "destination": "src/content/blog/legacy/Deploying-Hexo-on-GitHub-using-Arch Linux.md",
+      "title": "Deploying Hexo on GitHub using Arch Linux",
+      "slug": "Deploying-Hexo-on-GitHub-using-Arch Linux",
+      "oldPath": "/2025/10/21/Deploying-Hexo-on-GitHub-using-Arch Linux/",
+      "newPath": "/blog/Deploying-Hexo-on-GitHub-using-Arch%20Linux/",
+      "sourceSHA256": "7b9479968e218c9b88e7b2d050d6ece4940083f0585085003db1f5cb67a4a8b8",
+      "bodySHA256": "53b1d0fb1aa71fae018885bbc99973ba4b7495f582c70a8e45302255e5f0e969",
+      "metadata": {
+        "title": "Deploying Hexo on GitHub using Arch Linux",
+        "description": "A simple guide that helps you deploy Hexo on your GitHub pages using Arch Linux",
+        "pubDate": "2025-10-21",
+        "tags": [
+          "Technology",
+          "Hexo"
+        ],
+        "categories": [],
+        "author": "Chino520",
+        "draft": false,
+        "slug": "Deploying-Hexo-on-GitHub-using-Arch Linux",
+        "legacyHtml": true,
+        "legacyPath": "/2025/10/21/Deploying-Hexo-on-GitHub-using-Arch Linux/",
+        "excerpt": "<p>A simple guide that helps you deploy Hexo on your GitHub pages using Arch Linux</p>",
+        "math": true,
+        "sourceRepository": "HarrisonIsMe470/HarrisonIsMe470-old-blog",
+        "sourceCommit": "ea1ba1abb8733b2cd81798a77ece90e4b1876e8f"
+      }
+    },
+    {
+      "source": "2025/10/23/Markdown-Guide/index.html",
+      "destination": "src/content/blog/legacy/Markdown-Guide.md",
+      "title": "Markdown Guide",
+      "slug": "Markdown-Guide",
+      "oldPath": "/2025/10/23/Markdown-Guide/",
+      "newPath": "/blog/Markdown-Guide/",
+      "sourceSHA256": "1265e7b34ed0cd0e3f5ebc1f2b267cd0da60b9be0d6f6528665de22f4bb657b1",
+      "bodySHA256": "0ab34b63fbc4b85a317d8e4599cab648c84be71ca13c1ea2840066f0fca666f7",
+      "metadata": {
+        "title": "Markdown Guide",
+        "description": "A simple Markdown Guide This is a markdown guide that helps you write articles organized and easy to read. Please be aware of that when you’re using Hexo, several syntax may be different from the original Markdown’s syntax. I summarized both of Hexo’s syntax and the original Markdown’s syntax in the mind map, and I have stricken through the original one which I recommend you avoid using. Also, Markdown cannot deal with some needs such as aligning text to the right, even though these needs are quite common. So I’ll use HTML where Markdown doesn’t satisfy my needs. The following content is a practice for these syntax.",
+        "pubDate": "2025-10-23",
+        "tags": [
+          "Technology",
+          "Hexo"
+        ],
+        "categories": [],
+        "author": "Chino520",
+        "draft": false,
+        "slug": "Markdown-Guide",
+        "legacyHtml": true,
+        "legacyPath": "/2025/10/23/Markdown-Guide/",
+        "excerpt": "<div style=\"text-align: center\"><h1>A simple Markdown Guide</h1></div>\n<!--<img src=\"/2025/10/23/Markdown-Guide/Markdown.jpg\" class=\"\" title=\"Markdown Guide\">-->\n<p>This is a markdown guide that helps you write articles organized and easy to read. <!--This mind map ☝️ shows most syntax that you may need when you intend to explain ideas as clear as possible.--></p>\n<p>Please be aware of that when you’re using Hexo, several syntax may be different from the original Markdown’s syntax. I summarized both of Hexo’s syntax and the original Markdown’s syntax in the mind map, and I have stricken through the original one which I recommend you avoid using. </p>\n<p>Also, Markdown cannot deal with some needs such as aligning text to the right, even though these needs are quite common. So I’ll use HTML where Markdown doesn’t satisfy my needs.</p>\n<p>The following content is a practice for these syntax.</p>",
+        "math": false,
+        "sourceRepository": "HarrisonIsMe470/HarrisonIsMe470-old-blog",
+        "sourceCommit": "ea1ba1abb8733b2cd81798a77ece90e4b1876e8f"
+      }
+    },
+    {
+      "source": "2025/10/24/Top-100-popular-programming-languages-in-2025/index.html",
+      "destination": "src/content/blog/legacy/Top-100-popular-programming-languages-in-2025.md",
+      "title": "Top 100 popular programming languages in 2025",
+      "slug": "Top-100-popular-programming-languages-in-2025",
+      "oldPath": "/2025/10/24/Top-100-popular-programming-languages-in-2025/",
+      "newPath": "/blog/Top-100-popular-programming-languages-in-2025/",
+      "sourceSHA256": "8b8d269fb49604ce78d6e47a8f78688f2396374840fc260e1c8c10ba905a7132",
+      "bodySHA256": "6a0404396e4bca587cb496670a42481866507a492bd713312dfb6a453408ce55",
+      "metadata": {
+        "title": "Top 100 popular programming languages in 2025",
+        "description": "Rank 1 to 20",
+        "pubDate": "2025-10-24",
+        "tags": [
+          "Technology"
+        ],
+        "categories": [],
+        "author": "Chino520",
+        "draft": false,
+        "slug": "Top-100-popular-programming-languages-in-2025",
+        "legacyHtml": true,
+        "legacyPath": "/2025/10/24/Top-100-popular-programming-languages-in-2025/",
+        "excerpt": "<div style=\"text-align: center\"><h1>Rank 1 to 20</h1></div>\n<img class=\"\" src=\"/2025/10/24/Top-100-popular-programming-languages-in-2025/Top%2020%20popular%20programming%20languages%20in%202025.jpg\" title=\"Top 20 popular programming languages in 2025\"/>",
+        "math": false,
+        "sourceRepository": "HarrisonIsMe470/HarrisonIsMe470-old-blog",
+        "sourceCommit": "ea1ba1abb8733b2cd81798a77ece90e4b1876e8f"
+      }
+    },
+    {
+      "source": "2025/10/25/曼昆经济学原理读书笔记/index.html",
+      "destination": "src/content/blog/legacy/曼昆经济学原理读书笔记.md",
+      "title": "曼昆《经济学原理》",
+      "slug": "曼昆经济学原理读书笔记",
+      "oldPath": "/2025/10/25/曼昆经济学原理读书笔记/",
+      "newPath": "/blog/%E6%9B%BC%E6%98%86%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%8E%9F%E7%90%86%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/",
+      "sourceSHA256": "e078660d6dd2506b4018d0d1366fa35346f720c8d9d738f5847d8151267ee5cf",
+      "bodySHA256": "8392b93ae973c8c8c6ab2b4bf56f1f8f6b3d8d8edd8a973e4033ec1205d3fbb9",
+      "metadata": {
+        "title": "曼昆《经济学原理》",
+        "description": "0. 引言 此文章为曼昆（N. Gregory Mankiw）《经济学原理》（ Principles of Economics ）第7版读书笔记。其中， 这样子的词 代表专业概念，我会用阅读时的知识架构用自己的话（或是书本原话，如果我觉得没有更好的表达方法时）试着解释，请不要当作教材学习喵🐱。",
+        "pubDate": "2025-10-25",
+        "tags": [
+          "Book Summary",
+          "Economics"
+        ],
+        "categories": [],
+        "author": "Chino520",
+        "draft": false,
+        "slug": "曼昆经济学原理读书笔记",
+        "legacyHtml": true,
+        "legacyPath": "/2025/10/25/曼昆经济学原理读书笔记/",
+        "excerpt": "<h1 id=\"0-引言\"><a class=\"headerlink\" href=\"#0-引言\" title=\"0. 引言\"></a>0. 引言</h1><p>此文章为曼昆（N. Gregory Mankiw）《经济学原理》（<em>Principles of Economics</em>）第7版读书笔记。其中，<code>这样子的词</code>代表专业概念，我会用阅读时的知识架构用自己的话（或是书本原话，如果我觉得没有更好的表达方法时）试着解释，请不要当作教材学习喵🐱。</p>",
+        "math": true,
+        "sourceRepository": "HarrisonIsMe470/HarrisonIsMe470-old-blog",
+        "sourceCommit": "ea1ba1abb8733b2cd81798a77ece90e4b1876e8f"
+      }
+    },
+    {
+      "source": "2025/10/26/A-Common-Sense-Guide-to-Data-Structure-and-Algorithms/index.html",
+      "destination": "src/content/blog/legacy/A-Common-Sense-Guide-to-Data-Structure-and-Algorithms.md",
+      "title": "A Common-Sense Guide to Data Structure and Algorithms",
+      "slug": "A-Common-Sense-Guide-to-Data-Structure-and-Algorithms",
+      "oldPath": "/2025/10/26/A-Common-Sense-Guide-to-Data-Structure-and-Algorithms/",
+      "newPath": "/blog/A-Common-Sense-Guide-to-Data-Structure-and-Algorithms/",
+      "sourceSHA256": "1e19c725322f48b4f8fd40a3a4439df41c4eca7fccef30d79aef053296c15284",
+      "bodySHA256": "76a5969a990772cb0c7776f239ae1026e8052496e7c061d16fe9c984fed78ccb",
+      "metadata": {
+        "title": "A Common-Sense Guide to Data Structure and Algorithms",
+        "description": "Remember, It is important to associate new knowledge with those you’ve already learnt.",
+        "pubDate": "2025-10-26",
+        "tags": [
+          "Technology",
+          "Book Summary"
+        ],
+        "categories": [],
+        "author": "Chino520",
+        "draft": false,
+        "slug": "A-Common-Sense-Guide-to-Data-Structure-and-Algorithms",
+        "legacyHtml": true,
+        "legacyPath": "/2025/10/26/A-Common-Sense-Guide-to-Data-Structure-and-Algorithms/",
+        "excerpt": "<p>Remember, It is important to associate new knowledge with those you’ve already learnt.</p>",
+        "math": true,
+        "sourceRepository": "HarrisonIsMe470/HarrisonIsMe470-old-blog",
+        "sourceCommit": "ea1ba1abb8733b2cd81798a77ece90e4b1876e8f"
+      }
+    },
+    {
+      "source": "2025/10/26/自我成长/index.html",
+      "destination": "src/content/blog/legacy/自我成长.md",
+      "title": "自我成长",
+      "slug": "自我成长",
+      "oldPath": "/2025/10/26/自我成长/",
+      "newPath": "/blog/%E8%87%AA%E6%88%91%E6%88%90%E9%95%BF/",
+      "sourceSHA256": "f27244ec13d5a8bea434b097b8ac17b0b8a159d806dc4beae2052eda99368720",
+      "bodySHA256": "29c635fddbd046c7146e005031ee20c99a02b20ddecf5d56d3aa9f5184bcedd2",
+      "metadata": {
+        "title": "自我成长",
+        "description": "自我成长",
+        "pubDate": "2025-10-26",
+        "tags": [
+          "Psychology",
+          "Neuroscience"
+        ],
+        "categories": [],
+        "author": "Chino520",
+        "draft": false,
+        "slug": "自我成长",
+        "legacyHtml": true,
+        "legacyPath": "/2025/10/26/自我成长/",
+        "excerpt": "<img class=\"\" src=\"/2025/10/26/%E8%87%AA%E6%88%91%E6%88%90%E9%95%BF/%E6%9C%AC%E5%AD%90%E5%9C%A8%E9%9A%94%E5%A3%81%E8%AF%B4.jpg\" title=\"本子在隔壁说\"/>\n<img class=\"\" src=\"/2025/10/26/%E8%87%AA%E6%88%91%E6%88%90%E9%95%BF/%E6%83%85%E7%BB%AA%E6%8E%A2%E7%B4%A2.jpg\" title=\"Emotional Exploration\"/>\n<img class=\"\" src=\"/2025/10/26/%E8%87%AA%E6%88%91%E6%88%90%E9%95%BF/Overcome%20Perfectionism.jpg\" title=\"Overcome Perfectionism\"/>",
+        "math": false,
+        "sourceRepository": "HarrisonIsMe470/HarrisonIsMe470-old-blog",
+        "sourceCommit": "ea1ba1abb8733b2cd81798a77ece90e4b1876e8f"
+      }
+    },
+    {
+      "source": "2025/10/27/Arch-Linux-Instruction/index.html",
+      "destination": "src/content/blog/legacy/Arch-Linux-Instruction.md",
+      "title": "Arch Linux Instruction",
+      "slug": "Arch-Linux-Instruction",
+      "oldPath": "/2025/10/27/Arch-Linux-Instruction/",
+      "newPath": "/blog/Arch-Linux-Instruction/",
+      "sourceSHA256": "f3137be12814422278e267f4f51eb83cf258bdc95a7fe22b7b99d6424f038678",
+      "bodySHA256": "5c778f0d39b728fcdcb529aaa382c2887dde532c2c4da81dab62f2523467e32c",
+      "metadata": {
+        "title": "Arch Linux Instruction",
+        "description": "A simple Arch Linux instruction",
+        "pubDate": "2025-10-27",
+        "tags": [
+          "Technology"
+        ],
+        "categories": [],
+        "author": "Chino520",
+        "draft": false,
+        "slug": "Arch-Linux-Instruction",
+        "legacyHtml": true,
+        "legacyPath": "/2025/10/27/Arch-Linux-Instruction/",
+        "excerpt": "<p>A simple Arch Linux instruction</p>",
+        "math": true,
+        "sourceRepository": "HarrisonIsMe470/HarrisonIsMe470-old-blog",
+        "sourceCommit": "ea1ba1abb8733b2cd81798a77ece90e4b1876e8f"
+      }
+    },
+    {
+      "source": "2025/10/27/Latex-Document/index.html",
+      "destination": "src/content/blog/legacy/Latex-Document.md",
+      "title": "Latex Document",
+      "slug": "Latex-Document",
+      "oldPath": "/2025/10/27/Latex-Document/",
+      "newPath": "/blog/Latex-Document/",
+      "sourceSHA256": "f28b96e732130d16131f341ba1b949696fd99a9db0d723164e6c11469472ab4a",
+      "bodySHA256": "53fd5aeaeb79856cf92483e3ddbad1091a351e36a3801c30752aad84bd71b05f",
+      "metadata": {
+        "title": "Latex Document",
+        "description": "Hello, there. I’m writing this post for summarizing Latex syntax that are often used. I don’t like to write reports in Latex as the syntax are so complicated and it’s easy to forget them once you don’t use Latex for a while. Anyway, let’s start to do our summarizing.",
+        "pubDate": "2025-10-27",
+        "tags": [
+          "Technology",
+          "Academic Research"
+        ],
+        "categories": [],
+        "author": "Chino520",
+        "draft": false,
+        "slug": "Latex-Document",
+        "legacyHtml": true,
+        "legacyPath": "/2025/10/27/Latex-Document/",
+        "excerpt": "<p>Hello, there. I’m writing this post for summarizing Latex syntax that are often used. I don’t like to write reports in Latex as the syntax are so complicated and it’s easy to forget them once you don’t use Latex for a while. Anyway, let’s start to do our summarizing.</p>",
+        "math": true,
+        "sourceRepository": "HarrisonIsMe470/HarrisonIsMe470-old-blog",
+        "sourceCommit": "ea1ba1abb8733b2cd81798a77ece90e4b1876e8f"
+      }
+    },
+    {
+      "source": "2025/10/27/Mistakes-Summary/index.html",
+      "destination": "src/content/blog/legacy/Mistakes-Summary.md",
+      "title": "Mistakes Summary",
+      "slug": "Mistakes-Summary",
+      "oldPath": "/2025/10/27/Mistakes-Summary/",
+      "newPath": "/blog/Mistakes-Summary/",
+      "sourceSHA256": "2833d64d5bada252080f61f9a867a7542db825a310e3f2f1421feb986433298f",
+      "bodySHA256": "1cb6ff4dfb25e29e2e9b8208dbd95cd53de846f2bd058a93e11a5d89a790f895",
+      "metadata": {
+        "title": "Mistakes Summary",
+        "description": "I’m writing this post to summarize all the mistakes I’ve been making for several times. You know what? They just don’t come into my mind!",
+        "pubDate": "2025-10-27",
+        "tags": [
+          "Chino520"
+        ],
+        "categories": [],
+        "author": "Chino520",
+        "draft": false,
+        "slug": "Mistakes-Summary",
+        "legacyHtml": true,
+        "legacyPath": "/2025/10/27/Mistakes-Summary/",
+        "excerpt": "<p>I’m writing this post to summarize all the mistakes I’ve been making for several times. You know what? They just don’t come into my mind!</p>",
+        "math": false,
+        "sourceRepository": "HarrisonIsMe470/HarrisonIsMe470-old-blog",
+        "sourceCommit": "ea1ba1abb8733b2cd81798a77ece90e4b1876e8f"
+      }
+    },
+    {
+      "source": "2025/10/29/Katex-Guide/index.html",
+      "destination": "src/content/blog/legacy/Katex-Guide.md",
+      "title": "Katex Guide",
+      "slug": "Katex-Guide",
+      "oldPath": "/2025/10/29/Katex-Guide/",
+      "newPath": "/blog/Katex-Guide/",
+      "sourceSHA256": "4c7553e7edbd76396bc1e185ab5218c84666d1553cc6aa6bae4b53c3a2cf484b",
+      "bodySHA256": "188bd7b1e88fe5af4f1ea6d4f9ce88dd80f365a6dc62c6ae55cdd114d3f2e49b",
+      "metadata": {
+        "title": "Katex Guide",
+        "description": "A simple guide that helps you write mathematical formula using Katex.",
+        "pubDate": "2025-10-29",
+        "tags": [
+          "Hexo",
+          "Mathematics"
+        ],
+        "categories": [],
+        "author": "Chino520",
+        "draft": false,
+        "slug": "Katex-Guide",
+        "legacyHtml": true,
+        "legacyPath": "/2025/10/29/Katex-Guide/",
+        "excerpt": "<p>A simple guide that helps you write mathematical formula using Katex.</p>",
+        "math": true,
+        "sourceRepository": "HarrisonIsMe470/HarrisonIsMe470-old-blog",
+        "sourceCommit": "ea1ba1abb8733b2cd81798a77ece90e4b1876e8f"
+      }
+    },
+    {
+      "source": "2025/11/12/情绪词汇/index.html",
+      "destination": "src/content/blog/legacy/情绪词汇.md",
+      "title": "情绪词汇",
+      "slug": "情绪词汇",
+      "oldPath": "/2025/11/12/情绪词汇/",
+      "newPath": "/blog/%E6%83%85%E7%BB%AA%E8%AF%8D%E6%B1%87/",
+      "sourceSHA256": "eb372209e5bdb6b43bd3139e9cc44ade71e1a63c0b4c6def66faeec93f1c3d1e",
+      "bodySHA256": "8b80f1dbf9fa7d5142b81e3d00fa75b2fa328dfd926e64871a97c4dc042f31ca",
+      "metadata": {
+        "title": "情绪词汇",
+        "description": "情绪可分为4个象限，2个维度：积极还是消极、高唤醒还是低唤醒。这篇文章总结了一共58种情绪。有些我体验过，记录了发生情绪的triggers是什么；有些我没有体验过或无相关体验了，记录了发生时会有什么特征。同时，这篇文章也说明了这些情绪发生时给我们带来的信号。",
+        "pubDate": "2025-11-12",
+        "tags": [
+          "Psychology"
+        ],
+        "categories": [],
+        "author": "Chino520",
+        "draft": false,
+        "slug": "情绪词汇",
+        "legacyHtml": true,
+        "legacyPath": "/2025/11/12/情绪词汇/",
+        "excerpt": "<p>情绪可分为4个象限，2个维度：积极还是消极、高唤醒还是低唤醒。这篇文章总结了一共58种情绪。有些我体验过，记录了发生情绪的triggers是什么；有些我没有体验过或无相关体验了，记录了发生时会有什么特征。同时，这篇文章也说明了这些情绪发生时给我们带来的信号。</p>\n<hr/>",
+        "math": false,
+        "sourceRepository": "HarrisonIsMe470/HarrisonIsMe470-old-blog",
+        "sourceCommit": "ea1ba1abb8733b2cd81798a77ece90e4b1876e8f"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "source": "2025/10/23/Markdown-Guide/Markdown.jpg",
+      "destination": "public/2025/10/23/Markdown-Guide/Markdown.jpg",
+      "bytes": 1100437,
+      "sha256": "4b149e2d5d1368d5d25cf86b96c412cc16efaa16b53d770562cb24d95a2b60e9",
+      "kind": "image"
+    },
+    {
+      "source": "2025/10/24/Top-100-popular-programming-languages-in-2025/Top 20 popular programming languages in 2025.jpg",
+      "destination": "public/2025/10/24/Top-100-popular-programming-languages-in-2025/Top 20 popular programming languages in 2025.jpg",
+      "bytes": 1034867,
+      "sha256": "73da315ef535ca4275e4895aec606a3b8a2996e79669e02672342e2e0ff61ee5",
+      "kind": "image"
+    },
+    {
+      "source": "2025/10/24/Top-100-popular-programming-languages-in-2025/Top 21 to 50 popular programming languages in 2025.jpg",
+      "destination": "public/2025/10/24/Top-100-popular-programming-languages-in-2025/Top 21 to 50 popular programming languages in 2025.jpg",
+      "bytes": 1027557,
+      "sha256": "9232fe7ba3745e9fe4833f7731bf424b1d7431cb4ea8c28d0d0510b2d0a0bf34",
+      "kind": "image"
+    },
+    {
+      "source": "2025/10/24/Top-100-popular-programming-languages-in-2025/Top 51 to 100 popular programming languages in 2025.jpg",
+      "destination": "public/2025/10/24/Top-100-popular-programming-languages-in-2025/Top 51 to 100 popular programming languages in 2025.jpg",
+      "bytes": 2061375,
+      "sha256": "64a8cadaef428d9f6b8eceaab623c77a1494fb19ebdc0cd6c5bedf7232aa4791",
+      "kind": "image"
+    },
+    {
+      "source": "2025/10/25/曼昆经济学原理读书笔记/价格上限后果.png",
+      "destination": "public/2025/10/25/曼昆经济学原理读书笔记/价格上限后果.png",
+      "bytes": 6105,
+      "sha256": "3185444fa0fd200f9a9a37a9ac5bf5bdbd640a1a40e32738996def4f9c20c13e",
+      "kind": "image"
+    },
+    {
+      "source": "2025/10/25/曼昆经济学原理读书笔记/价格上限案例.jpg",
+      "destination": "public/2025/10/25/曼昆经济学原理读书笔记/价格上限案例.jpg",
+      "bytes": 22615,
+      "sha256": "a1b612dc1660543691d8e3b3b72e05444c98da8e2f857a8f4ef261aa1b45fc1f",
+      "kind": "image"
+    },
+    {
+      "source": "2025/10/25/曼昆经济学原理读书笔记/价格下限后果.png",
+      "destination": "public/2025/10/25/曼昆经济学原理读书笔记/价格下限后果.png",
+      "bytes": 5227,
+      "sha256": "c1bdc83e78fafb0c92bef367b7a9c2c0e48adcb1b4283edd6fe5770227af8b0e",
+      "kind": "image"
+    },
+    {
+      "source": "2025/10/25/曼昆经济学原理读书笔记/价格下限案例.png",
+      "destination": "public/2025/10/25/曼昆经济学原理读书笔记/价格下限案例.png",
+      "bytes": 8143,
+      "sha256": "bb4f1641dd2b40ac8720f4671d194cad240bcb35487798688163fc941eaa0c1d",
+      "kind": "image"
+    },
+    {
+      "source": "2025/10/25/曼昆经济学原理读书笔记/供给价格弹性.jpg",
+      "destination": "public/2025/10/25/曼昆经济学原理读书笔记/供给价格弹性.jpg",
+      "bytes": 154913,
+      "sha256": "a4f123ad4464737041b95acf2f52f95568a06f495fa7ee70314608bbf711d5d7",
+      "kind": "image"
+    },
+    {
+      "source": "2025/10/25/曼昆经济学原理读书笔记/供给曲线.png",
+      "destination": "public/2025/10/25/曼昆经济学原理读书笔记/供给曲线.png",
+      "bytes": 11579,
+      "sha256": "607bda5a0c837c9bbf67ccb36c5451e2685fcb47be25ac4ab70ec79fe9d1f5ba",
+      "kind": "image"
+    },
+    {
+      "source": "2025/10/25/曼昆经济学原理读书笔记/供给曲线Origin.png",
+      "destination": "public/2025/10/25/曼昆经济学原理读书笔记/供给曲线Origin.png",
+      "bytes": 10850,
+      "sha256": "d01d8a89740bb44aefc02fa2f69f93feb76fba5c2e741a180018e26b0bd919db",
+      "kind": "image"
+    },
+    {
+      "source": "2025/10/25/曼昆经济学原理读书笔记/供需曲线.png",
+      "destination": "public/2025/10/25/曼昆经济学原理读书笔记/供需曲线.png",
+      "bytes": 30778,
+      "sha256": "b020b7de05589aafbb9fb86f1a9e56cceaf468bce639ad32807de698f3a4a234",
+      "kind": "image"
+    },
+    {
+      "source": "2025/10/25/曼昆经济学原理读书笔记/弹性与税收归宿.jpg",
+      "destination": "public/2025/10/25/曼昆经济学原理读书笔记/弹性与税收归宿.jpg",
+      "bytes": 642661,
+      "sha256": "a2c616c31776cafac65132fa78450000ca15342cef3a0f3658c38d1c4c592da8",
+      "kind": "image"
+    },
+    {
+      "source": "2025/10/25/曼昆经济学原理读书笔记/循环流量图.png",
+      "destination": "public/2025/10/25/曼昆经济学原理读书笔记/循环流量图.png",
+      "bytes": 815445,
+      "sha256": "aae5f936dbe6afa79948c47685532b470b3052833e45aec398929a2b773a31fa",
+      "kind": "image"
+    },
+    {
+      "source": "2025/10/25/曼昆经济学原理读书笔记/消费者生产者剩余.png",
+      "destination": "public/2025/10/25/曼昆经济学原理读书笔记/消费者生产者剩余.png",
+      "bytes": 107734,
+      "sha256": "7106b1039b932287f7a6d7f26f337cc68555fc5d50bfcfd0234327baf2c33f1e",
+      "kind": "image"
+    },
+    {
+      "source": "2025/10/25/曼昆经济学原理读书笔记/生产可能性边界.jpeg",
+      "destination": "public/2025/10/25/曼昆经济学原理读书笔记/生产可能性边界.jpeg",
+      "bytes": 35400,
+      "sha256": "b692f5e7269829c4844055f2137f518194317f64369a9206881de4a4d5b14523",
+      "kind": "image"
+    },
+    {
+      "source": "2025/10/25/曼昆经济学原理读书笔记/石油市场.jpg",
+      "destination": "public/2025/10/25/曼昆经济学原理读书笔记/石油市场.jpg",
+      "bytes": 58326,
+      "sha256": "2a6566c89608d335842863534c7ec639ea4b014427cf969418a5876a1ebaff5a",
+      "kind": "image"
+    },
+    {
+      "source": "2025/10/25/曼昆经济学原理读书笔记/课税.jpg",
+      "destination": "public/2025/10/25/曼昆经济学原理读书笔记/课税.jpg",
+      "bytes": 26570,
+      "sha256": "46a23b687c1ab766fb2722f6538efbcd0762a7aff723c80d315b990c899a7d52",
+      "kind": "image"
+    },
+    {
+      "source": "2025/10/25/曼昆经济学原理读书笔记/谷贱伤农.jpg",
+      "destination": "public/2025/10/25/曼昆经济学原理读书笔记/谷贱伤农.jpg",
+      "bytes": 51085,
+      "sha256": "0e0e843abcad6d8b7bf041c5a5721d21ad3de12677df6f4366ceda79f0a624b3",
+      "kind": "image"
+    },
+    {
+      "source": "2025/10/25/曼昆经济学原理读书笔记/需求价格弹性.jpg",
+      "destination": "public/2025/10/25/曼昆经济学原理读书笔记/需求价格弹性.jpg",
+      "bytes": 140927,
+      "sha256": "144f791a496ae5693fe6bb55112a6aee1a5faa299f8a10388626306efb23cdea",
+      "kind": "image"
+    },
+    {
+      "source": "2025/10/25/曼昆经济学原理读书笔记/需求曲线.png",
+      "destination": "public/2025/10/25/曼昆经济学原理读书笔记/需求曲线.png",
+      "bytes": 10788,
+      "sha256": "e2fceb1c5e086bb666d4b48c3d73488414647c4d2a1f9ddd1792c28e4dedf780",
+      "kind": "image"
+    },
+    {
+      "source": "2025/10/25/曼昆经济学原理读书笔记/需求曲线Origin.png",
+      "destination": "public/2025/10/25/曼昆经济学原理读书笔记/需求曲线Origin.png",
+      "bytes": 10025,
+      "sha256": "3b94a4ce411545bec08ed830b24df146a46646ca973fdcd663e7e489447d89e5",
+      "kind": "image"
+    },
+    {
+      "source": "2025/10/26/自我成长/Overcome Perfectionism.jpg",
+      "destination": "public/2025/10/26/自我成长/Overcome Perfectionism.jpg",
+      "bytes": 1244472,
+      "sha256": "d33929ee750d4e68ff1f45fb51a0383b1507ed8018898b40b1d3c918992e1056",
+      "kind": "image"
+    },
+    {
+      "source": "2025/10/26/自我成长/情绪探索.jpg",
+      "destination": "public/2025/10/26/自我成长/情绪探索.jpg",
+      "bytes": 865023,
+      "sha256": "e65867d3e57eb01b6ad65245ae9fce22eb0ed160a384683b91c79f238cd47d03",
+      "kind": "image"
+    },
+    {
+      "source": "2025/10/26/自我成长/本子在隔壁说.jpg",
+      "destination": "public/2025/10/26/自我成长/本子在隔壁说.jpg",
+      "bytes": 2234799,
+      "sha256": "a92dec6dd191ed67d7d50fefd5ea74ad6411a13d564fde4f8cc6629d0832ae6f",
+      "kind": "image"
+    },
+    {
+      "source": "images/Another Kid & Pratzapp - Kyoto (freetouse.com).webp",
+      "destination": "public/images/Another Kid & Pratzapp - Kyoto (freetouse.com).webp",
+      "bytes": 406920,
+      "sha256": "599aa57e295c58d9faebeb73cd805ef9f11b9e5e61c6bd53b77049b7f92965e9",
+      "kind": "image"
+    },
+    {
+      "source": "images/Avanti - Time (freetouse.com).webp",
+      "destination": "public/images/Avanti - Time (freetouse.com).webp",
+      "bytes": 6552,
+      "sha256": "e5906c200899e73bbcfe75ff87b468b395cad338dfabc8bdc019e9c34969a2d9",
+      "kind": "image"
+    },
+    {
+      "source": "images/Aventure - A Beautiful Garden (freetouse.com).webp",
+      "destination": "public/images/Aventure - A Beautiful Garden (freetouse.com).webp",
+      "bytes": 56136,
+      "sha256": "6e9d5fd1caa13865f3874374178b37966edc2366e8b69f00e1c9658951b8e348",
+      "kind": "image"
+    },
+    {
+      "source": "images/Filo Starquez - Park Vibes (freetouse.com).webp",
+      "destination": "public/images/Filo Starquez - Park Vibes (freetouse.com).webp",
+      "bytes": 17922,
+      "sha256": "88119735e9ed6bfea64525c5335071def4b74c8ff98de0376894977f3fcfd19c",
+      "kind": "image"
+    },
+    {
+      "source": "images/Hazelwood - Coming Of Age (freetouse.com).webp",
+      "destination": "public/images/Hazelwood - Coming Of Age (freetouse.com).webp",
+      "bytes": 31942,
+      "sha256": "f142849f8390264080b042fd1b2ca837bf5432a9af4e698f7ef5fc237571f0e2",
+      "kind": "image"
+    },
+    {
+      "source": "images/Hoffy Beats - Florida Keys (freetouse.com).webp",
+      "destination": "public/images/Hoffy Beats - Florida Keys (freetouse.com).webp",
+      "bytes": 397272,
+      "sha256": "4c87f31b9759c2573f6b479b2e21a40aadf854f58d0623bf2e55cf7630e498d9",
+      "kind": "image"
+    },
+    {
+      "source": "images/Lukrembo - Jay (freetouse.com).webp",
+      "destination": "public/images/Lukrembo - Jay (freetouse.com).webp",
+      "bytes": 23350,
+      "sha256": "87379da9cf5e4f1d3d1facf7fc453b5a3078566fcf40f947c9689c288f09db33",
+      "kind": "image"
+    },
+    {
+      "source": "images/Milky Wayvers - Love in Japan (freetouse.com).webp",
+      "destination": "public/images/Milky Wayvers - Love in Japan (freetouse.com).webp",
+      "bytes": 10060,
+      "sha256": "30e05c0ff1ed0b229d24346a69b8070a9906e96dca4b441e339e283fa7f5a308",
+      "kind": "image"
+    },
+    {
+      "source": "images/avatar.jpg",
+      "destination": "public/images/avatar.jpg",
+      "bytes": 174387,
+      "sha256": "3e69ee7b16562978218425976f2d40bf2a8820ceb87808882320db94f1c519e4",
+      "kind": "image"
+    },
+    {
+      "source": "images/avatar1.jpg",
+      "destination": "public/images/avatar1.jpg",
+      "bytes": 488682,
+      "sha256": "a3596e90520ba78a02b8ff61e0f72477c4e640f8a48342d2a354eee423c29190",
+      "kind": "image"
+    },
+    {
+      "source": "images/avatar2.jpg",
+      "destination": "public/images/avatar2.jpg",
+      "bytes": 1416571,
+      "sha256": "6a0d9fa64bde6454b930abc507cade2bb2d09a15d9aad8504cf77143d7c2d9c3",
+      "kind": "image"
+    },
+    {
+      "source": "images/background1.jpg",
+      "destination": "public/images/background1.jpg",
+      "bytes": 1387551,
+      "sha256": "901fb0652d3bd84f43ddf27fce062a631bc10eba25b029b3474a3ba428dab36a",
+      "kind": "image"
+    },
+    {
+      "source": "images/background2.jpg",
+      "destination": "public/images/background2.jpg",
+      "bytes": 1014163,
+      "sha256": "dc12b100990b34132ce7360011683d7b47b985f4707e8191384b44f56472ca11",
+      "kind": "image"
+    },
+    {
+      "source": "images/background3.jpg",
+      "destination": "public/images/background3.jpg",
+      "bytes": 1366695,
+      "sha256": "0e46bacd418057649b8d9d9bf29189d0713b6d83d0d0b6b96341a2706538a480",
+      "kind": "image"
+    },
+    {
+      "source": "images/background4.jpg",
+      "destination": "public/images/background4.jpg",
+      "bytes": 1138753,
+      "sha256": "29a30ebaf998f55df6c0c2ef3a7e2d0f349f3c271c605d28486af6077b1631b3",
+      "kind": "image"
+    },
+    {
+      "source": "images/background5.jpg",
+      "destination": "public/images/background5.jpg",
+      "bytes": 823694,
+      "sha256": "a7f32628031533b6a6699f41dec886d17ea60e97aa405d820cc7765e9fc1899c",
+      "kind": "image"
+    },
+    {
+      "source": "images/background6.jpg",
+      "destination": "public/images/background6.jpg",
+      "bytes": 783014,
+      "sha256": "0b6c540dee152484829c0c65abe0eb96869ddbcdecb56b6a2d98594032c597be",
+      "kind": "image"
+    },
+    {
+      "source": "images/loading.gif",
+      "destination": "public/images/loading.gif",
+      "bytes": 39379,
+      "sha256": "142879716a3388947dbd89e648d8ada444d2f3fd02aae36620c9c5a3e5122dd7",
+      "kind": "image"
+    },
+    {
+      "source": "images/massobeats - daydream (freetouse.com).webp",
+      "destination": "public/images/massobeats - daydream (freetouse.com).webp",
+      "bytes": 4078,
+      "sha256": "cc85a0461d12de6c466c2ebdb7a23536c5816ddfb0ff87d37ee057cf26e39494",
+      "kind": "image"
+    },
+    {
+      "source": "images/massobeats - gingersweet (freetouse.com).webp",
+      "destination": "public/images/massobeats - gingersweet (freetouse.com).webp",
+      "bytes": 5364,
+      "sha256": "116d594b5c92a9048193273a8450b9d7cb32e373f5e4f38bbb5ae5160f5463d4",
+      "kind": "image"
+    },
+    {
+      "source": "music/Another Kid & Pratzapp - Kyoto (freetouse.com).mp3",
+      "destination": "public/music/Another Kid & Pratzapp - Kyoto (freetouse.com).mp3",
+      "bytes": 5771121,
+      "sha256": "30b73005009f5b2d01826380c5181578399ff3375e584681fec9326517d29c25",
+      "kind": "audio"
+    },
+    {
+      "source": "music/Avanti - Time (freetouse.com).mp3",
+      "destination": "public/music/Avanti - Time (freetouse.com).mp3",
+      "bytes": 4648874,
+      "sha256": "35c6fe682f8329e02a4e4430a42689d5f6213861524703b87d2d1c9e30b18ba3",
+      "kind": "audio"
+    },
+    {
+      "source": "music/Aventure - A Beautiful Garden (freetouse.com).mp3",
+      "destination": "public/music/Aventure - A Beautiful Garden (freetouse.com).mp3",
+      "bytes": 5283143,
+      "sha256": "55c47907dce926fa0cbb31909b505e04b0f6c1a300eccf6685158ce2d0519b5b",
+      "kind": "audio"
+    },
+    {
+      "source": "music/Filo Starquez - Park Vibes (freetouse.com).mp3",
+      "destination": "public/music/Filo Starquez - Park Vibes (freetouse.com).mp3",
+      "bytes": 5976952,
+      "sha256": "4967d5fa31e246098be7841b3d6cd68ad5693614a6dcb53e3a194c32ec4bbebd",
+      "kind": "audio"
+    },
+    {
+      "source": "music/Hazelwood - Coming Of Age (freetouse.com).mp3",
+      "destination": "public/music/Hazelwood - Coming Of Age (freetouse.com).mp3",
+      "bytes": 8333246,
+      "sha256": "04c357cd3f72aa10563ff5e01ecb61a7ced75cc86391a70db7d2fc75026689f5",
+      "kind": "audio"
+    },
+    {
+      "source": "music/Hoffy Beats - Florida Keys (freetouse.com).mp3",
+      "destination": "public/music/Hoffy Beats - Florida Keys (freetouse.com).mp3",
+      "bytes": 5900674,
+      "sha256": "60d9d53bb4e7e9d94183114de072888294892e406fd91df9c1ac81f0a22870f4",
+      "kind": "audio"
+    },
+    {
+      "source": "music/Lukrembo - Jay (freetouse.com).mp3",
+      "destination": "public/music/Lukrembo - Jay (freetouse.com).mp3",
+      "bytes": 6362591,
+      "sha256": "92513979007b8a2cbef4ad6da6bf9a169956bd90f99ffb186c77bfedbc325020",
+      "kind": "audio"
+    },
+    {
+      "source": "music/Milky Wayvers - Love in Japan (freetouse.com).mp3",
+      "destination": "public/music/Milky Wayvers - Love in Japan (freetouse.com).mp3",
+      "bytes": 4701145,
+      "sha256": "f9731ca4d691b29bf22373359e1b6e8e625c39b5e8807789e3eee8ab26f83649",
+      "kind": "audio"
+    },
+    {
+      "source": "music/massobeats - daydream (freetouse.com).mp3",
+      "destination": "public/music/massobeats - daydream (freetouse.com).mp3",
+      "bytes": 6999492,
+      "sha256": "af9521c466f2c05b8cd12d1ab35748660c8b815ae0369eeec9cf39337a694a3f",
+      "kind": "audio"
+    },
+    {
+      "source": "music/massobeats - gingersweet (freetouse.com).mp3",
+      "destination": "public/music/massobeats - gingersweet (freetouse.com).mp3",
+      "bytes": 6251758,
+      "sha256": "f6df0dfc9604b9a0c35fe9765336f7e557849e24ebea581e1f5d06f5b33847f6",
+      "kind": "audio"
+    }
+  ],
+  "inventory": [
+    {
+      "old": "2025/10/21/Deploying-Hexo-on-GitHub-using-Arch Linux/index.html",
+      "new": "src/content/blog/legacy/Deploying-Hexo-on-GitHub-using-Arch Linux.md",
+      "kind": "article"
+    },
+    {
+      "old": "2025/10/23/Markdown-Guide/Markdown.jpg",
+      "new": "public/2025/10/23/Markdown-Guide/Markdown.jpg",
+      "kind": "asset"
+    },
+    {
+      "old": "2025/10/23/Markdown-Guide/index.html",
+      "new": "src/content/blog/legacy/Markdown-Guide.md",
+      "kind": "article"
+    },
+    {
+      "old": "2025/10/24/Top-100-popular-programming-languages-in-2025/Top 20 popular programming languages in 2025.jpg",
+      "new": "public/2025/10/24/Top-100-popular-programming-languages-in-2025/Top 20 popular programming languages in 2025.jpg",
+      "kind": "asset"
+    },
+    {
+      "old": "2025/10/24/Top-100-popular-programming-languages-in-2025/Top 21 to 50 popular programming languages in 2025.jpg",
+      "new": "public/2025/10/24/Top-100-popular-programming-languages-in-2025/Top 21 to 50 popular programming languages in 2025.jpg",
+      "kind": "asset"
+    },
+    {
+      "old": "2025/10/24/Top-100-popular-programming-languages-in-2025/Top 51 to 100 popular programming languages in 2025.jpg",
+      "new": "public/2025/10/24/Top-100-popular-programming-languages-in-2025/Top 51 to 100 popular programming languages in 2025.jpg",
+      "kind": "asset"
+    },
+    {
+      "old": "2025/10/24/Top-100-popular-programming-languages-in-2025/index.html",
+      "new": "src/content/blog/legacy/Top-100-popular-programming-languages-in-2025.md",
+      "kind": "article"
+    },
+    {
+      "old": "2025/10/25/曼昆经济学原理读书笔记/index.html",
+      "new": "src/content/blog/legacy/曼昆经济学原理读书笔记.md",
+      "kind": "article"
+    },
+    {
+      "old": "2025/10/25/曼昆经济学原理读书笔记/价格上限后果.png",
+      "new": "public/2025/10/25/曼昆经济学原理读书笔记/价格上限后果.png",
+      "kind": "asset"
+    },
+    {
+      "old": "2025/10/25/曼昆经济学原理读书笔记/价格上限案例.jpg",
+      "new": "public/2025/10/25/曼昆经济学原理读书笔记/价格上限案例.jpg",
+      "kind": "asset"
+    },
+    {
+      "old": "2025/10/25/曼昆经济学原理读书笔记/价格下限后果.png",
+      "new": "public/2025/10/25/曼昆经济学原理读书笔记/价格下限后果.png",
+      "kind": "asset"
+    },
+    {
+      "old": "2025/10/25/曼昆经济学原理读书笔记/价格下限案例.png",
+      "new": "public/2025/10/25/曼昆经济学原理读书笔记/价格下限案例.png",
+      "kind": "asset"
+    },
+    {
+      "old": "2025/10/25/曼昆经济学原理读书笔记/供给价格弹性.jpg",
+      "new": "public/2025/10/25/曼昆经济学原理读书笔记/供给价格弹性.jpg",
+      "kind": "asset"
+    },
+    {
+      "old": "2025/10/25/曼昆经济学原理读书笔记/供给曲线.png",
+      "new": "public/2025/10/25/曼昆经济学原理读书笔记/供给曲线.png",
+      "kind": "asset"
+    },
+    {
+      "old": "2025/10/25/曼昆经济学原理读书笔记/供给曲线Origin.png",
+      "new": "public/2025/10/25/曼昆经济学原理读书笔记/供给曲线Origin.png",
+      "kind": "asset"
+    },
+    {
+      "old": "2025/10/25/曼昆经济学原理读书笔记/供需曲线.png",
+      "new": "public/2025/10/25/曼昆经济学原理读书笔记/供需曲线.png",
+      "kind": "asset"
+    },
+    {
+      "old": "2025/10/25/曼昆经济学原理读书笔记/弹性与税收归宿.jpg",
+      "new": "public/2025/10/25/曼昆经济学原理读书笔记/弹性与税收归宿.jpg",
+      "kind": "asset"
+    },
+    {
+      "old": "2025/10/25/曼昆经济学原理读书笔记/循环流量图.png",
+      "new": "public/2025/10/25/曼昆经济学原理读书笔记/循环流量图.png",
+      "kind": "asset"
+    },
+    {
+      "old": "2025/10/25/曼昆经济学原理读书笔记/消费者生产者剩余.png",
+      "new": "public/2025/10/25/曼昆经济学原理读书笔记/消费者生产者剩余.png",
+      "kind": "asset"
+    },
+    {
+      "old": "2025/10/25/曼昆经济学原理读书笔记/生产可能性边界.jpeg",
+      "new": "public/2025/10/25/曼昆经济学原理读书笔记/生产可能性边界.jpeg",
+      "kind": "asset"
+    },
+    {
+      "old": "2025/10/25/曼昆经济学原理读书笔记/石油市场.jpg",
+      "new": "public/2025/10/25/曼昆经济学原理读书笔记/石油市场.jpg",
+      "kind": "asset"
+    },
+    {
+      "old": "2025/10/25/曼昆经济学原理读书笔记/课税.jpg",
+      "new": "public/2025/10/25/曼昆经济学原理读书笔记/课税.jpg",
+      "kind": "asset"
+    },
+    {
+      "old": "2025/10/25/曼昆经济学原理读书笔记/谷贱伤农.jpg",
+      "new": "public/2025/10/25/曼昆经济学原理读书笔记/谷贱伤农.jpg",
+      "kind": "asset"
+    },
+    {
+      "old": "2025/10/25/曼昆经济学原理读书笔记/需求价格弹性.jpg",
+      "new": "public/2025/10/25/曼昆经济学原理读书笔记/需求价格弹性.jpg",
+      "kind": "asset"
+    },
+    {
+      "old": "2025/10/25/曼昆经济学原理读书笔记/需求曲线.png",
+      "new": "public/2025/10/25/曼昆经济学原理读书笔记/需求曲线.png",
+      "kind": "asset"
+    },
+    {
+      "old": "2025/10/25/曼昆经济学原理读书笔记/需求曲线Origin.png",
+      "new": "public/2025/10/25/曼昆经济学原理读书笔记/需求曲线Origin.png",
+      "kind": "asset"
+    },
+    {
+      "old": "2025/10/26/A-Common-Sense-Guide-to-Data-Structure-and-Algorithms/index.html",
+      "new": "src/content/blog/legacy/A-Common-Sense-Guide-to-Data-Structure-and-Algorithms.md",
+      "kind": "article"
+    },
+    {
+      "old": "2025/10/26/自我成长/Overcome Perfectionism.jpg",
+      "new": "public/2025/10/26/自我成长/Overcome Perfectionism.jpg",
+      "kind": "asset"
+    },
+    {
+      "old": "2025/10/26/自我成长/index.html",
+      "new": "src/content/blog/legacy/自我成长.md",
+      "kind": "article"
+    },
+    {
+      "old": "2025/10/26/自我成长/情绪探索.jpg",
+      "new": "public/2025/10/26/自我成长/情绪探索.jpg",
+      "kind": "asset"
+    },
+    {
+      "old": "2025/10/26/自我成长/本子在隔壁说.jpg",
+      "new": "public/2025/10/26/自我成长/本子在隔壁说.jpg",
+      "kind": "asset"
+    },
+    {
+      "old": "2025/10/27/Arch-Linux-Instruction/index.html",
+      "new": "src/content/blog/legacy/Arch-Linux-Instruction.md",
+      "kind": "article"
+    },
+    {
+      "old": "2025/10/27/Latex-Document/index.html",
+      "new": "src/content/blog/legacy/Latex-Document.md",
+      "kind": "article"
+    },
+    {
+      "old": "2025/10/27/Mistakes-Summary/index.html",
+      "new": "src/content/blog/legacy/Mistakes-Summary.md",
+      "kind": "article"
+    },
+    {
+      "old": "2025/10/29/Katex-Guide/index.html",
+      "new": "src/content/blog/legacy/Katex-Guide.md",
+      "kind": "article"
+    },
+    {
+      "old": "2025/11/12/情绪词汇/index.html",
+      "new": "src/content/blog/legacy/情绪词汇.md",
+      "kind": "article"
+    },
+    {
+      "old": "About/index.html",
+      "new": "src/data/legacy-profile.json + src/content/pages/legacy-about.html + src/pages/about.astro",
+      "kind": "page"
+    },
+    {
+      "old": "archives/2025/10/index.html",
+      "new": null,
+      "kind": "generated-index"
+    },
+    {
+      "old": "archives/2025/11/index.html",
+      "new": null,
+      "kind": "generated-index"
+    },
+    {
+      "old": "archives/2025/index.html",
+      "new": null,
+      "kind": "generated-index"
+    },
+    {
+      "old": "archives/2025/page/2/index.html",
+      "new": null,
+      "kind": "generated-index"
+    },
+    {
+      "old": "archives/index.html",
+      "new": null,
+      "kind": "generated-index"
+    },
+    {
+      "old": "archives/page/2/index.html",
+      "new": null,
+      "kind": "generated-index"
+    },
+    {
+      "old": "css/main.css",
+      "new": null,
+      "kind": "framework"
+    },
+    {
+      "old": "images/Another Kid & Pratzapp - Kyoto (freetouse.com).webp",
+      "new": "public/images/Another Kid & Pratzapp - Kyoto (freetouse.com).webp",
+      "kind": "asset"
+    },
+    {
+      "old": "images/Avanti - Time (freetouse.com).webp",
+      "new": "public/images/Avanti - Time (freetouse.com).webp",
+      "kind": "asset"
+    },
+    {
+      "old": "images/Aventure - A Beautiful Garden (freetouse.com).webp",
+      "new": "public/images/Aventure - A Beautiful Garden (freetouse.com).webp",
+      "kind": "asset"
+    },
+    {
+      "old": "images/Filo Starquez - Park Vibes (freetouse.com).webp",
+      "new": "public/images/Filo Starquez - Park Vibes (freetouse.com).webp",
+      "kind": "asset"
+    },
+    {
+      "old": "images/Hazelwood - Coming Of Age (freetouse.com).webp",
+      "new": "public/images/Hazelwood - Coming Of Age (freetouse.com).webp",
+      "kind": "asset"
+    },
+    {
+      "old": "images/Hoffy Beats - Florida Keys (freetouse.com).webp",
+      "new": "public/images/Hoffy Beats - Florida Keys (freetouse.com).webp",
+      "kind": "asset"
+    },
+    {
+      "old": "images/Lukrembo - Jay (freetouse.com).webp",
+      "new": "public/images/Lukrembo - Jay (freetouse.com).webp",
+      "kind": "asset"
+    },
+    {
+      "old": "images/Milky Wayvers - Love in Japan (freetouse.com).webp",
+      "new": "public/images/Milky Wayvers - Love in Japan (freetouse.com).webp",
+      "kind": "asset"
+    },
+    {
+      "old": "images/avatar.jpg",
+      "new": "public/images/avatar.jpg",
+      "kind": "asset"
+    },
+    {
+      "old": "images/avatar1.jpg",
+      "new": "public/images/avatar1.jpg",
+      "kind": "asset"
+    },
+    {
+      "old": "images/avatar2.jpg",
+      "new": "public/images/avatar2.jpg",
+      "kind": "asset"
+    },
+    {
+      "old": "images/background1.jpg",
+      "new": "public/images/background1.jpg",
+      "kind": "asset"
+    },
+    {
+      "old": "images/background2.jpg",
+      "new": "public/images/background2.jpg",
+      "kind": "asset"
+    },
+    {
+      "old": "images/background3.jpg",
+      "new": "public/images/background3.jpg",
+      "kind": "asset"
+    },
+    {
+      "old": "images/background4.jpg",
+      "new": "public/images/background4.jpg",
+      "kind": "asset"
+    },
+    {
+      "old": "images/background5.jpg",
+      "new": "public/images/background5.jpg",
+      "kind": "asset"
+    },
+    {
+      "old": "images/background6.jpg",
+      "new": "public/images/background6.jpg",
+      "kind": "asset"
+    },
+    {
+      "old": "images/loading.gif",
+      "new": "public/images/loading.gif",
+      "kind": "asset"
+    },
+    {
+      "old": "images/massobeats - daydream (freetouse.com).webp",
+      "new": "public/images/massobeats - daydream (freetouse.com).webp",
+      "kind": "asset"
+    },
+    {
+      "old": "images/massobeats - gingersweet (freetouse.com).webp",
+      "new": "public/images/massobeats - gingersweet (freetouse.com).webp",
+      "kind": "asset"
+    },
+    {
+      "old": "index.html",
+      "new": "src/data/legacy-site.json + src/data/music.json (extract hand-maintained data and excerpts)",
+      "kind": "generated-index-with-user-data"
+    },
+    {
+      "old": "js/heart.js",
+      "new": null,
+      "kind": "framework"
+    },
+    {
+      "old": "js/lib/crypto.js",
+      "new": null,
+      "kind": "framework"
+    },
+    {
+      "old": "js/lib/highlight.js",
+      "new": null,
+      "kind": "framework"
+    },
+    {
+      "old": "js/lib/home.js",
+      "new": null,
+      "kind": "framework"
+    },
+    {
+      "old": "js/lib/math.js",
+      "new": null,
+      "kind": "framework"
+    },
+    {
+      "old": "js/lib/preview.js",
+      "new": null,
+      "kind": "framework"
+    },
+    {
+      "old": "js/lib/search.js",
+      "new": null,
+      "kind": "framework"
+    },
+    {
+      "old": "js/main.js",
+      "new": null,
+      "kind": "framework"
+    },
+    {
+      "old": "music/Another Kid & Pratzapp - Kyoto (freetouse.com).mp3",
+      "new": "public/music/Another Kid & Pratzapp - Kyoto (freetouse.com).mp3",
+      "kind": "asset"
+    },
+    {
+      "old": "music/Avanti - Time (freetouse.com).mp3",
+      "new": "public/music/Avanti - Time (freetouse.com).mp3",
+      "kind": "asset"
+    },
+    {
+      "old": "music/Aventure - A Beautiful Garden (freetouse.com).mp3",
+      "new": "public/music/Aventure - A Beautiful Garden (freetouse.com).mp3",
+      "kind": "asset"
+    },
+    {
+      "old": "music/Filo Starquez - Park Vibes (freetouse.com).mp3",
+      "new": "public/music/Filo Starquez - Park Vibes (freetouse.com).mp3",
+      "kind": "asset"
+    },
+    {
+      "old": "music/Hazelwood - Coming Of Age (freetouse.com).mp3",
+      "new": "public/music/Hazelwood - Coming Of Age (freetouse.com).mp3",
+      "kind": "asset"
+    },
+    {
+      "old": "music/Hoffy Beats - Florida Keys (freetouse.com).mp3",
+      "new": "public/music/Hoffy Beats - Florida Keys (freetouse.com).mp3",
+      "kind": "asset"
+    },
+    {
+      "old": "music/Lukrembo - Jay (freetouse.com).mp3",
+      "new": "public/music/Lukrembo - Jay (freetouse.com).mp3",
+      "kind": "asset"
+    },
+    {
+      "old": "music/Milky Wayvers - Love in Japan (freetouse.com).mp3",
+      "new": "public/music/Milky Wayvers - Love in Japan (freetouse.com).mp3",
+      "kind": "asset"
+    },
+    {
+      "old": "music/massobeats - daydream (freetouse.com).mp3",
+      "new": "public/music/massobeats - daydream (freetouse.com).mp3",
+      "kind": "asset"
+    },
+    {
+      "old": "music/massobeats - gingersweet (freetouse.com).mp3",
+      "new": "public/music/massobeats - gingersweet (freetouse.com).mp3",
+      "kind": "asset"
+    },
+    {
+      "old": "page/2/index.html",
+      "new": "src/data/legacy-site.json + src/data/music.json (extract hand-maintained data and excerpts)",
+      "kind": "generated-index-with-user-data"
+    },
+    {
+      "old": "tags/Academic-Research/index.html",
+      "new": null,
+      "kind": "generated-index"
+    },
+    {
+      "old": "tags/Book-Summary/index.html",
+      "new": null,
+      "kind": "generated-index"
+    },
+    {
+      "old": "tags/Chino520/index.html",
+      "new": null,
+      "kind": "generated-index"
+    },
+    {
+      "old": "tags/Economics/index.html",
+      "new": null,
+      "kind": "generated-index"
+    },
+    {
+      "old": "tags/Hexo/index.html",
+      "new": null,
+      "kind": "generated-index"
+    },
+    {
+      "old": "tags/Mathematics/index.html",
+      "new": null,
+      "kind": "generated-index"
+    },
+    {
+      "old": "tags/Neuroscience/index.html",
+      "new": null,
+      "kind": "generated-index"
+    },
+    {
+      "old": "tags/Psychology/index.html",
+      "new": null,
+      "kind": "generated-index"
+    },
+    {
+      "old": "tags/Technology/index.html",
+      "new": null,
+      "kind": "generated-index"
+    },
+    {
+      "old": "tags/index.html",
+      "new": null,
+      "kind": "generated-index"
+    }
+  ],
+  "redirects": {
+    "/2025/10/21/Deploying-Hexo-on-GitHub-using-Arch Linux/": "/blog/Deploying-Hexo-on-GitHub-using-Arch%20Linux/",
+    "/2025/10/23/Markdown-Guide/": "/blog/Markdown-Guide/",
+    "/2025/10/24/Top-100-popular-programming-languages-in-2025/": "/blog/Top-100-popular-programming-languages-in-2025/",
+    "/2025/10/25/曼昆经济学原理读书笔记/": "/blog/%E6%9B%BC%E6%98%86%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%8E%9F%E7%90%86%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/",
+    "/2025/10/26/A-Common-Sense-Guide-to-Data-Structure-and-Algorithms/": "/blog/A-Common-Sense-Guide-to-Data-Structure-and-Algorithms/",
+    "/2025/10/26/自我成长/": "/blog/%E8%87%AA%E6%88%91%E6%88%90%E9%95%BF/",
+    "/2025/10/27/Arch-Linux-Instruction/": "/blog/Arch-Linux-Instruction/",
+    "/2025/10/27/Latex-Document/": "/blog/Latex-Document/",
+    "/2025/10/27/Mistakes-Summary/": "/blog/Mistakes-Summary/",
+    "/2025/10/29/Katex-Guide/": "/blog/Katex-Guide/",
+    "/2025/11/12/情绪词汇/": "/blog/%E6%83%85%E7%BB%AA%E8%AF%8D%E6%B1%87/",
+    "/archives/2025/10/": "/blog/",
+    "/archives/2025/11/": "/blog/",
+    "/archives/2025/": "/blog/",
+    "/archives/2025/page/2/": "/blog/",
+    "/archives/": "/blog/",
+    "/archives/page/2/": "/blog/",
+    "/page/2/": "/blog/",
+    "/tags/Academic-Research/": "/blog/",
+    "/tags/Book-Summary/": "/blog/",
+    "/tags/Chino520/": "/blog/",
+    "/tags/Economics/": "/blog/",
+    "/tags/Hexo/": "/blog/",
+    "/tags/Mathematics/": "/blog/",
+    "/tags/Neuroscience/": "/blog/",
+    "/tags/Psychology/": "/blog/",
+    "/tags/Technology/": "/blog/",
+    "/tags/": "/blog/",
+    "/About/": "/about/"
+  },
+  "legacyWalineURL": "https://waline-qyunf8hb4-chino520reals-projects.vercel.app/",
+  "limitations": [
+    "Only generated HTML exists; unpublished drafts and original Markdown are absent.",
+    "No per-post updated dates or explicit cover metadata survive in the source.",
+    "Waline comments live outside this repository and are not exported here."
+  ]
+}
