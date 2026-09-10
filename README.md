@@ -448,3 +448,9 @@ node scripts/verify-math.mjs
 来源服务地址记录在 manifest，若还需要迁移评论，需另行提供服务端导出。
 文章里的外部参考链接和原有示例占位 URL 保持原样；本次验证保证本地路径有效，
 不承诺第三方站点、视频或外部账户当前可用。
+
+## Theme and music player
+
+The journal now adapts the charcoal-and-gold sidebar design from MarcusHoltz’s Astro Marketing Theme, with a light-mode toggle and a music player that continues through internal navigation. See [THEME.md](THEME.md) for upstream attribution, customization, playlist discovery, and the September 2026 content changes.
+
+Run `node scripts/verify-music.mjs` to check shuffle cycles and player controls. Update History lives in `src/data/updates.json` and renders dates as Day Month Year.

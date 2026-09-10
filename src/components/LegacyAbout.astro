@@ -1,19 +1,14 @@
 ---
 import legacyProfile from '../data/legacy-profile.json';
 import site from '../data/legacy-site.json';
+import UpdateHistory from './UpdateHistory.astro';
 import history from '../content/pages/legacy-about.html?raw';
 ---
-<section class="about-section" aria-labelledby={legacyProfile.introAnchor}>
-  <h2 id={legacyProfile.introAnchor}>{legacyProfile.introduction}</h2>
-  <p>{site.title} · {site.subtitle}</p>
-  <p>{site.bio} {site.description}</p>
-  <ul>{site.contacts.map(contact => <li><a href={contact.url}>{contact.label}</a></li>)}</ul>
-  <p><a href="/music/">Enjoy your music :) →</a></p>
+<section class="about-section" aria-labelledby="links" id={legacyProfile.introAnchor}>
+  <h2 id="links">Links</h2>
+  <ul class="contact-links">{site.contacts.map(contact => <li><a href={contact.url}>{contact.label}</a></li>)}</ul>
 </section>
-<section class="about-section prose legacy-content" aria-label="旧博客更新历史和待办事项">
+<UpdateHistory />
+<section class="about-section prose legacy-content" aria-label="旧博客待办事项">
   <Fragment set:html={history} />
-</section>
-<section class="about-section" aria-labelledby="friend-links">
-  <h2 id="friend-links">友情链接</h2>
-  <ul>{site.friends.map(friend => <li><a href={friend.url}>{friend.name}</a></li>)}</ul>
 </section>

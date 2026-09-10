@@ -100,22 +100,37 @@ for source,target in manifest['redirects'].items():
 about = parse((build/'about/index.html').read_text())
 original_about = parse((old/'About/index.html').read_text()).select_one('.article > .content')
 for node in original_about.select('li,p'):
+    # Update History dates were reformatted by request on 10 September 2026.
+    if node.name == 'p' and node.find('code') and '2025/10/21' in node.get_text():
+        continue
     text=normalized_text(node)
     assert text in normalized_text(about), ('About text missing',node.get_text())
 for heading in original_about.select('h1[id]'):
     assert about.find(id=heading['id']), ('Missing About anchor',heading['id'])
+updates=json.loads((root/'src/data/updates.json').read_text())
+assert len(updates)==len(about.select('.update-history li'))
+for update, item in zip(updates, about.select('.update-history li')):
+    from datetime import date
+    day=date.fromisoformat(update['date'])
+    assert item.time['datetime']==update['date']
+    assert item.time.get_text()==f'{day.day} {day.strftime("%B %Y")}'
+    assert item.p.get_text()==update['text']
+assert updates[-1]=={'date':'2026-09-10','text':'迁移至新blog框架Astro'}
+assert '友情链接' not in about.get_text() and not about.select('a[href="https://argvchs.github.io/"]')
+assert not (build/'blog/welcome/index.html').exists()
+assert 'A personal blog and a growing collection' not in (build/'projects/index.html').read_text()
 old_checked = len(original_about.select('input[checked]'))
 legacy_profile=json.loads((root/'src/data/legacy-profile.json').read_text())
 new_checked=sum(item['completed'] for item in legacy_profile['bucketList'])+len(about.select('input[checked]'))
 assert old_checked==new_checked, 'Checklist status changed'
-assert len(list((root/'src/content/blog').rglob('*.md'))) + len(list((root/'src/content/blog').rglob('*.mdx'))) == 17
-assert len(list((build/'blog').glob('*/index.html')))==12, 'Published post count mismatch'
+assert len(list((root/'src/content/blog').rglob('*.md'))) + len(list((root/'src/content/blog').rglob('*.mdx'))) == 16
+assert len(list((build/'blog').glob('*/index.html')))==11, 'Published post count mismatch'
 for protected in ['astro.config.mjs','.github/workflows/deploy.yml','public/CNAME']:
     assert subprocess.check_output(['git','diff','--',protected])==b'',protected
 assert (build/'CNAME').read_text().strip()=='chino520.xyz'
 assert not issues, json.dumps(issues,ensure_ascii=False,indent=2)
 (root/'migration/formula-fixtures.json').write_text(json.dumps(formula_samples,ensure_ascii=False,indent=2)+'\n')
-print(json.dumps({'articles_found':11,'articles_migrated':11,'skipped':0,'total_content_entries':17,
-                  'published_posts':12,'drafts':5,'images':45,'audio':10,'article_image_references':image_refs,
+print(json.dumps({'articles_found':11,'articles_migrated':11,'skipped':0,'total_content_entries':16,
+                  'published_posts':11,'drafts':5,'images':45,'audio':10,'article_image_references':image_refs,
                   'code_blocks_preserved':code_count,'formulas':len(formula_samples),
                   'local_broken_links':0,'protected_deployment_files':'unchanged'},ensure_ascii=False,indent=2))

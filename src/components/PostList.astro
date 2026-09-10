@@ -4,4 +4,4 @@ import FormattedDate from './FormattedDate.astro';
 interface Props { posts: CollectionEntry<'blog'>[]; }
 const { posts } = Astro.props;
 ---
-<ul class="post-list">{posts.map(post => <li><div class="post-date"><FormattedDate date={post.data.pubDate} /></div><div><h3><a href={`/blog/${post.id}/`}>{post.data.title}<span aria-hidden="true"> ↗</span></a></h3><p>{post.data.description}</p><div class="tags">{post.data.tags.map(tag => <span>{tag}</span>)}</div></div></li>)}</ul>
+<ul class="post-list">{posts.map(post => <li data-post-tags={JSON.stringify(post.data.tags)}><div class="post-date"><FormattedDate date={post.data.pubDate} /></div><div><h3><a href={`/blog/${post.id}/`}>{post.data.title}<span aria-hidden="true"> ↗</span></a></h3><p>{post.data.description}</p><div class="tags">{post.data.tags.map(tag => <a href={`/blog/?tag=${encodeURIComponent(tag)}`}>{tag}</a>)}</div></div></li>)}</ul>

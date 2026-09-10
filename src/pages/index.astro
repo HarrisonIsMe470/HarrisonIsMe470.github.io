@@ -1,11 +1,19 @@
 ---
+import ConstellationSky from '../components/ConstellationSky.astro';
+import MeteorShower from '../components/MeteorShower.astro';
 import Page from '../layouts/Page.astro';
 import PostList from '../components/PostList.astro';
 import { getPosts } from '../lib/posts';
 const posts = (await getPosts()).slice(0, 4);
 ---
 <Page>
-  <section class="intro"><p class="eyebrow">A personal corner of the internet</p><h1>Hi, I’m Harrison<span class="accent">.</span><br />Welcome to my journal.</h1><p class="lede">Notes on building, learning, and the things in between. A place for projects in progress and ideas worth keeping.</p><a class="text-link" href="/about/">A little more about me <span aria-hidden="true">→</span></a></section>
+  <div class="home-scene">
+  <MeteorShower />
+  <ConstellationSky />
+  <section class="intro"><p class="eyebrow">A personal universe of the internet</p><h1>Hi, I’m<br />Harrison<span class="accent">.</span></h1><p class="lede">Notes on building, learning, and the things in between. My universe of projects, discoveries, and ideas worth keeping.</p><div class="hero-actions"><a class="button-primary" href="/blog/">Explore the journal ↗</a><a class="text-link" href="/about/">About me →</a></div></section>
   <section><div class="section-heading"><h2>Latest writing</h2><a href="/blog/">All posts →</a></div><PostList posts={posts} /></section>
-  <aside class="project-callout"><p class="eyebrow">Made along the way</p><h2>Learning by making.</h2><p>A home for the things I build, from first experiments to finished projects.</p><a class="text-link" href="/projects/">Explore my projects →</a></aside>
+  </div>
 </Page>
+<style>
+  .home-scene { isolation: isolate; }
+</style>

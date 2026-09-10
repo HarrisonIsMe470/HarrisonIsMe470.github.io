@@ -1,0 +1,26 @@
+[
+  {
+    "date": "2025-10-21",
+    "text": "小破站开始营业啦"
+  },
+  {
+    "date": "2025-10-22",
+    "text": "完成Waline评论系统搭建"
+  },
+  {
+    "date": "2025-10-23",
+    "text": "发表了文章《Markdown Guide》。完成了Categories和Tags的搭建。完成了About的撰写"
+  },
+  {
+    "date": "2025-10-25",
+    "text": "添加了音乐插件"
+  },
+  {
+    "date": "2025-10-26",
+    "text": "发表了思维导图《自我成长》。写完了《Top 100 popular programming languages in 2025》"
+  },
+  {
+    "date": "2026-09-10",
+    "text": "迁移至新blog框架Astro"
+  }
+]

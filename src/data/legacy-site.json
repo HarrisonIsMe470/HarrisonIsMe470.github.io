@@ -7,22 +7,16 @@
   "avatar": "/images/avatar.jpg",
   "contacts": [
     {
-      "label": "GitHub (旧账号)",
-      "url": "https://github.com/Chino520Real"
+      "label": "GitHub",
+      "url": "https://github.com/harrisonisme470"
     },
     {
-      "label": "Email",
-      "url": "mailto:chino520forever@gmail.com"
+      "label": "Email · haochen.qiu.cs@gmail.com",
+      "url": "mailto:haochen.qiu.cs@gmail.com"
     },
     {
       "label": "Bilibili",
       "url": "https://space.bilibili.com/1876361"
-    }
-  ],
-  "friends": [
-    {
-      "name": "Argvchs",
-      "url": "https://argvchs.github.io"
     }
   ]
 }

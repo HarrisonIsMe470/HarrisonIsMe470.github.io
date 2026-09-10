@@ -6,12 +6,27 @@ import { commentsEnabled, giscus } from '../lib/services';
   <h2 id="comments-title">Like this post & leave a comment</h2>
   {commentsEnabled ? <>
     <p>Use the 👍 reaction below to like this post. Likes and comments are saved with your GitHub account.</p>
-    <div class="giscus"></div>
-    <script is:inline src="https://giscus.app/client.js" data-repo={giscus.repo} data-repo-id={giscus.repoId}
-      data-category={giscus.category} data-category-id={giscus.categoryId} data-mapping="pathname" data-strict="1"
-      data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light"
-      data-lang="en" data-loading="lazy" crossorigin="anonymous" async></script>
+    <div class="giscus" data-giscus data-repo={giscus.repo} data-repo-id={giscus.repoId} data-category={giscus.category} data-category-id={giscus.categoryId}></div>
     <p class="small">If the discussion doesn’t load, <a href={`https://github.com/${giscus.repo}/discussions`}>visit GitHub Discussions</a>.</p>
     <noscript>Enable JavaScript to like or comment here, or use the GitHub Discussions link above.</noscript>
   </> : <div class="notice"><button disabled type="button">♡ Like</button><p>Likes and comments are not available yet. Please check back soon.</p></div>}
 </section>
+
+<script>
+  function comments() {
+    const container = document.querySelector<HTMLElement>('[data-giscus]');
+    if (!container || container.dataset.loaded) return;
+    container.dataset.loaded = 'true';
+    const script = document.createElement('script');
+    script.src = 'https://giscus.app/client.js'; script.async = true; script.crossOrigin = 'anonymous';
+    for (const key of ['repo', 'repo-id', 'category', 'category-id']) script.setAttribute(`data-${key}`, container.getAttribute(`data-${key}`)!);
+    const config = { mapping: 'pathname', strict: '1', 'reactions-enabled': '1', 'emit-metadata': '0', 'input-position': 'top', theme: document.documentElement.classList.contains('light-mode') ? 'light' : 'dark', lang: 'en', loading: 'lazy' };
+    Object.entries(config).forEach(([key, value]) => script.setAttribute(`data-${key}`, value));
+    container.append(script);
+  }
+  document.addEventListener('astro:page-load', comments);
+  document.addEventListener('journal:theme', () => {
+    document.querySelector<HTMLIFrameElement>('.giscus-frame')?.contentWindow?.postMessage({ giscus: { setConfig: { theme: document.documentElement.classList.contains('light-mode') ? 'light' : 'dark' } } }, 'https://giscus.app');
+  });
+  comments();
+</script>

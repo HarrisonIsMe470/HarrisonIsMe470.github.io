@@ -2,10 +2,13 @@
 import 'katex/dist/katex.min.css';
 ---
 <script>
-  const elements = document.querySelectorAll<HTMLElement>('[data-math="true"]');
+  async function renderMath() {
+  const elements = document.querySelectorAll<HTMLElement>('[data-math="true"]:not([data-math-rendered])');
   if (elements.length) {
+    elements.forEach(element => { element.dataset.mathRendered = 'true'; });
     const { default: renderMathInElement } = await import('katex/contrib/auto-render');
-    elements.forEach(element => renderMathInElement(element, {
+    elements.forEach(element => {
+      renderMathInElement(element, {
       delimiters: [
         { left: '$$', right: '$$', display: true },
         { left: '$', right: '$', display: false },
@@ -17,6 +20,9 @@ import 'katex/dist/katex.min.css';
       strict: false, // Preserve the original Chinese labels inside formulas.
       // Preserve the literal examples in the Markdown/LaTeX tutorials.
       ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code', 'option'],
-    }));
+    }); });
   }
+  }
+  document.addEventListener('astro:page-load', renderMath);
+  void renderMath();
 </script>

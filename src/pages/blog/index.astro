@@ -1,7 +1,7 @@
 ---
 import Page from '../../layouts/Page.astro';
-import PostList from '../../components/PostList.astro';
+import TagFilter from '../../components/TagFilter.astro';
 import { getPosts } from '../../lib/posts';
 const posts = await getPosts();
 ---
-<Page title="Writing · Harrison’s Journal" description="Notes, ideas, and things learned along the way."><p class="eyebrow">The journal</p><h1>Writing<span class="accent">.</span></h1><p class="lede">Notes, ideas, and things learned along the way.</p><PostList posts={posts} /></Page>
+<Page title="Writing · Harrison’s Journal" description="Notes, ideas, and things learned along the way."><p class="eyebrow">The journal</p><h1>Writing<span class="accent">.</span></h1><p class="lede">Notes, ideas, and things learned along the way.</p><TagFilter posts={posts} /></Page>

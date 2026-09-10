@@ -1,0 +1,28 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import PostList from './PostList.astro';
+interface Props { posts: CollectionEntry<'blog'>[]; }
+const { posts } = Astro.props;
+const counts = new Map<string, number>();
+posts.forEach(post => new Set(post.data.tags).forEach(tag => counts.set(tag, (counts.get(tag) || 0) + 1)));
+const tags = [...counts].sort(([a], [b]) => a.localeCompare(b));
+---
+<section data-tag-filter aria-label="Browse posts by tag">
+  <nav class="tag-filters" aria-label="Filter by tag">
+    <a href="/blog/" data-filter-tag="" aria-current="true">All <span>{posts.length}</span></a>
+    {tags.map(([tag, count]) => <a href={`/blog/?tag=${encodeURIComponent(tag)}`} data-filter-tag={tag}>{tag} <span>{count}</span></a>)}
+  </nav>
+  <p class="small filter-summary" data-filter-summary role="status">{posts.length} posts</p>
+  <PostList posts={posts} />
+  <p class="notice" data-filter-empty hidden>No posts with this tag. <a href="/blog/">View all posts →</a></p>
+  <noscript><p class="small">Enable JavaScript to filter by tag. All posts are listed above.</p></noscript>
+</section>
+<script src="../scripts/tag-filter.ts"></script>
+<style>
+  .tag-filters { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; }
+  .tag-filters a { display: inline-flex; align-items: center; gap: 12px; padding: 7px 14px; border: 1px solid var(--line); background: var(--soft); color: var(--muted); font-size: .8rem; text-decoration: none; }
+  .tag-filters a:hover, .tag-filters a[aria-current="true"] { border-color: var(--accent); color: var(--accent); }
+  .tag-filters a[aria-current="true"] { box-shadow: inset 0 -2px var(--accent); }
+  .tag-filters span { font-size: .65rem; opacity: .8; }
+  .filter-summary { margin: 22px 0 0; }
+</style>

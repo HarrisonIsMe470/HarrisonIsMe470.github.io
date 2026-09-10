@@ -1,0 +1,11 @@
+---
+import updates from '../data/updates.json';
+const format = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+---
+<section class="about-section" aria-labelledby="📆-Update-History">
+  <p class="eyebrow">The journal, over time</p>
+  <h2 id="📆-Update-History">Update History</h2>
+  <ol class="update-history">
+    {updates.map(update => <li><time datetime={update.date}>{format.format(new Date(update.date))}</time><p>{update.text}</p></li>)}
+  </ol>
+</section>

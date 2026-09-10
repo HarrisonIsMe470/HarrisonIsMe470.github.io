@@ -1,4 +1,6 @@
 ---
+import { ClientRouter } from 'astro:transitions';
+import MusicPlayer from '../components/MusicPlayer.astro';
 import type { ImageMetadata } from 'astro';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
@@ -7,4 +9,19 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 interface Props { title?: string; description?: string; image?: ImageMetadata; }
 const { title = SITE_TITLE, description = SITE_DESCRIPTION, image } = Astro.props;
 ---
-<!doctype html><html lang="en"><head><BaseHead title={title} description={description} image={image} /></head><body><Header /><main id="main"><slot /></main><Footer /></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <script is:inline>
+      try { document.documentElement.classList.toggle('light-mode', localStorage.getItem('journal-theme') === 'light'); } catch {}
+    </script>
+    <ClientRouter />
+    <BaseHead title={title} description={description} image={image} />
+  </head>
+  <body>
+    <Header />
+    <main id="main"><slot /></main>
+    <Footer />
+    <MusicPlayer />
+  </body>
+</html>

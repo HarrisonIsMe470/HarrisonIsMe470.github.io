@@ -1,4 +1,24 @@
 ---
 import { analyticsURL } from '../lib/services';
 ---
-{import.meta.env.PROD && analyticsURL && <script is:inline data-goatcounter={`${analyticsURL}/count`} async src="https://gc.zgo.at/count.js"></script>}
+{import.meta.env.PROD && analyticsURL && <span hidden data-analytics-endpoint={`${analyticsURL}/count`}></span>}
+<script>
+  const endpoint = document.querySelector<HTMLElement>('[data-analytics-endpoint]')?.dataset.analyticsEndpoint;
+  if (endpoint) {
+    let lastPath = '';
+    function count() {
+      const tracker = (window as any).goatcounter;
+      if (tracker?.count && lastPath !== location.pathname) {
+        tracker.count({ path: location.pathname, title: document.title });
+        lastPath = location.pathname;
+      }
+    }
+    const script = document.createElement('script');
+    script.src = 'https://gc.zgo.at/count.js'; script.async = true;
+    script.dataset.goatcounter = endpoint;
+    script.dataset.goatcounterSettings = JSON.stringify({ no_onload: true });
+    script.addEventListener('load', count);
+    document.head.append(script);
+    document.addEventListener('astro:page-load', count);
+  }
+</script>

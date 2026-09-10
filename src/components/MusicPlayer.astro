@@ -1,0 +1,14 @@
+---
+import { playlist } from '../lib/music';
+---
+<section class="music-player" aria-label="Music player" transition:persist="journal-player" id="music-player">
+  <script type="application/json" data-playlist set:html={JSON.stringify(playlist).replace(/</g, '\\u003c')} />
+  <audio preload="none" data-audio></audio>
+  <img data-cover src={playlist[0]?.cover || '/images/avatar.jpg'} width="44" height="44" alt="" />
+  <div class="now-playing"><a href="/music/" class="eyebrow">On shuffle · {playlist.length} tracks</a><strong data-title>Music for the moment</strong><span data-status role="status">Press play to start</span></div>
+  <button type="button" data-play aria-label="Play music" disabled={!playlist.length}>Play</button>
+  <button type="button" data-next aria-label="Shuffle to next track" disabled={!playlist.length}>Next ↗</button>
+  <label class="seek-control"><span class="sr-only">Playback position</span><input type="range" data-seek min="0" max="100" value="0" step="0.1" disabled /><span data-time>0:00 / 0:00</span></label>
+  <label class="volume-control"><span>Volume</span><input type="range" data-volume min="0" max="1" value="0.5" step="0.01" /></label>
+</section>
+<script src="../scripts/music-player.ts"></script>

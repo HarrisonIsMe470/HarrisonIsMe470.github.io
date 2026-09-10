@@ -2,11 +2,53 @@
 import HeaderLink from './HeaderLink.astro';
 ---
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header">
-  <a class="brand" href="/" aria-label="Harrison’s Journal, home"><span class="monogram">h.</span> Harrison’s Journal</a>
+<div class="mobile-bar"><a href="/" class="brand">Harrison<span class="accent">.</span></a><button type="button" data-menu-toggle aria-controls="site-sidebar" aria-expanded="false">Menu</button></div>
+<header class="site-header" id="site-sidebar">
+  <p class="sidebar-welcome">Welcome to my universe</p>
+  <a class="brand sidebar-brand" href="/" aria-label="Harrison’s Journal, home"><img src="/images/avatar.jpg" width="72" height="72" alt="" /><span>Harrison<span class="accent">.</span></span><small>A personal universe</small></a>
   <nav aria-label="Main navigation">
-    <HeaderLink href="/">Home</HeaderLink><HeaderLink href="/blog/">Blog</HeaderLink>
-    <HeaderLink href="/projects/">Projects</HeaderLink><HeaderLink href="/about/">About</HeaderLink>
-    <HeaderLink href="/stats/">Visitors</HeaderLink>
+    <HeaderLink href="/"><span>01</span> Home</HeaderLink><HeaderLink href="/blog/"><span>02</span> Blog</HeaderLink>
+    <HeaderLink href="/projects/"><span>03</span> Projects</HeaderLink><HeaderLink href="/about/"><span>04</span> About</HeaderLink>
+    <HeaderLink href="/music/"><span>05</span> Music</HeaderLink><HeaderLink href="/stats/"><span>06</span> Visitors</HeaderLink>
   </nav>
+  <div class="sidebar-bottom"><p>Building. Learning.<br />Taking notes along the way.</p><button type="button" data-theme-toggle aria-label="Switch to light theme">Light mode ↗</button></div>
 </header>
+<script>
+  function syncTheme() {
+    const light = document.documentElement.classList.contains('light-mode');
+    document.querySelectorAll('[data-theme-toggle]').forEach(button => {
+      button.textContent = light ? 'Dark mode ↗' : 'Light mode ↗';
+      button.setAttribute('aria-label', `Switch to ${light ? 'dark' : 'light'} theme`);
+    });
+  }
+  document.addEventListener('click', event => {
+    const target = event.target as Element;
+    if (target.closest('[data-theme-toggle]')) {
+      const light = document.documentElement.classList.toggle('light-mode');
+      try { localStorage.setItem('journal-theme', light ? 'light' : 'dark'); } catch {}
+      syncTheme();
+      document.dispatchEvent(new Event('journal:theme'));
+    }
+    const toggle = target.closest('[data-menu-toggle]');
+    if (toggle) {
+      const open = document.documentElement.classList.toggle('menu-open');
+      toggle.setAttribute('aria-expanded', String(open));
+    }
+    if (target.closest('#site-sidebar a')) {
+      document.documentElement.classList.remove('menu-open');
+      document.querySelector('[data-menu-toggle]')?.setAttribute('aria-expanded', 'false');
+    }
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && document.documentElement.classList.contains('menu-open')) {
+      document.documentElement.classList.remove('menu-open');
+      const toggle = document.querySelector<HTMLButtonElement>('[data-menu-toggle]');
+      toggle?.setAttribute('aria-expanded', 'false'); toggle?.focus();
+    }
+  });
+  document.addEventListener('astro:before-swap', (event: any) => {
+    event.newDocument.documentElement.classList.toggle('light-mode', document.documentElement.classList.contains('light-mode'));
+  });
+  document.addEventListener('astro:page-load', syncTheme);
+  syncTheme();
+</script>
