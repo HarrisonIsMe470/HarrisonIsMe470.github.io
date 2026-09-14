@@ -10,7 +10,7 @@ export default defineConfig({
 	output: 'static',
 	base: '/',
 	trailingSlash: 'always',
-	integrations: [mdx(), sitemap()],
+	integrations: [mdx(), sitemap({ filter: (page) => !page.includes('/time-machine/') && !page.includes('/account/') })],
 	fonts: [
 		{
 			provider: fontProviders.local(),

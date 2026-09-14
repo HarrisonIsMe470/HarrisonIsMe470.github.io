@@ -1,0 +1,13 @@
+---
+import Page from '../layouts/Page.astro';
+---
+<Page title="Time Machine · Harrison’s Journal" description="A place for our memories.">
+ <section class="time-machine" data-machine>
+ <div class="sea-life" aria-hidden="true"><span>𓆉</span><span>🐠</span><span>🪼</span><span>🐟</span></div>
+ <p class="eyebrow">07 / Our ocean of memories</p><h1>Time Machine</h1><p>Little moments. A whole world beneath the surface.</p>
+ <p data-status role="status">Loading memories…</p>
+ <div data-memories hidden><div class="interaction-actions"><button data-new>＋ New memory</button><label>Travel through time <select data-order><option value="oldest">Oldest first</option><option value="newest">Newest first</option></select></label><label>Jump to year <select data-year><option value="">All years</option></select></label></div>
+ <form data-story hidden><h2 data-editor-title>New memory</h2><label>Title <input name="title" required maxlength="160" /></label><label>Date and time <input name="date" type="datetime-local" required /></label><label>Description <textarea name="description" maxlength="10000" rows="4"></textarea></label><label>Photos (up to 4; 1.5 MB each)<input name="photos" type="file" accept="image/jpeg,image/png,image/webp" multiple /></label><label><input type="checkbox" name="clearPhotos" /> Remove existing photos</label><button>Save memory</button><button data-cancel-story type="button">Cancel</button></form>
+ <div class="memory-timeline" data-timeline></div></div>
+ </section>
+</Page>

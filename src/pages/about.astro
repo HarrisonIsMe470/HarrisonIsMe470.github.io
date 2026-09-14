@@ -1,4 +1,5 @@
 ---
+import Discovery from '../components/Discovery.astro';
 import Page from '../layouts/Page.astro';
 import { profile, books, bucketList } from '../data/profile';
 import legacyProfile from '../data/legacy-profile.json';
@@ -10,4 +11,5 @@ import LegacyAbout from '../components/LegacyAbout.astro';
 <section class="about-section"><p class="eyebrow">On the bookshelf</p><h2>Books I have read</h2>{books.length ? <ul class="book-list">{books.map(book => <li><h3>{book.url ? <a href={book.url}>{book.title}</a> : book.title}</h3>{(book.author || book.finished) && <p>{book.author}{book.finished && ` · Finished ${book.finished}`}</p>}{book.note && <p>{book.note}</p>}</li>)}</ul> : <p>My reading list is coming soon. There’s always room for another good book.</p>}</section>
 <section class="about-section"><p class="eyebrow">A list for a lifetime</p><h2 id={legacyProfile.bucketAnchor}>Things I want to do in my life</h2><p>{legacyProfile.bucketTitle}</p><ul class="bucket-list">{bucketList.map(item => <li><span class:list={['check', { done: item.completed }]} aria-label={item.completed ? 'Completed' : 'Still to do'}>{item.completed ? '✓' : '○'}</span><span class:list={{ completed: item.completed }}>{item.text}</span></li>)}</ul></section>
 <LegacyAbout />
+<Discovery />
 </Page>

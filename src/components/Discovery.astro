@@ -1,0 +1,52 @@
+<section data-discovery aria-label="Ocean keepsakes">
+ <div class="ocean-garden" aria-label="Interactive marine decorations">
+  <button type="button" class="marine-creature turtle" data-key="0" aria-label="Sea turtle"><span aria-hidden="true">🐢</span></button>
+  <button type="button" class="marine-creature fish" data-key="-1" aria-label="Tropical fish"><span aria-hidden="true">🐠</span></button>
+  <button type="button" class="marine-creature jellyfish" data-key="1" aria-label="Jellyfish"><span aria-hidden="true">🪼</span></button>
+  <button type="button" class="marine-creature octopus" data-key="-1" aria-label="Octopus"><span aria-hidden="true">🐙</span></button>
+ </div>
+</section>
+<script>
+ import { revealTimeMachine } from '../lib/discovery-session';
+ import { createUnlock } from '../lib/unlock.mjs';
+ function setup(){
+ const root=document.querySelector<HTMLElement>('[data-discovery]'); if(!root||root.dataset.ready)return;root.dataset.ready='true';
+ const state=createUnlock();let armed=false,code='';let timer:ReturnType<typeof setTimeout>;
+ const reset=()=>{state.reset();clearTimeout(timer);armed=false;code='';};
+ root.querySelectorAll<HTMLButtonElement>('[data-key]').forEach(button=>{
+ button.onclick=()=>{
+  button.classList.remove('greet');void button.offsetWidth;button.classList.add('greet');
+  if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
+   button.querySelectorAll('.marine-bubble').forEach(bubble=>bubble.remove());
+   for(let i=0;i<7;i++){
+    const bubble=document.createElement('i');bubble.className='marine-bubble';bubble.setAttribute('aria-hidden','true');
+    bubble.style.setProperty('--bubble-x',`${(i-3)*13}px`);
+    bubble.style.setProperty('--bubble-delay',`${i*45}ms`);
+    bubble.style.setProperty('--bubble-size',`${4+(i%3)*3}px`);
+    bubble.addEventListener('animationend',()=>bubble.remove(),{once:true});button.append(bubble);
+   }
+  }
+  armed=state.activate(Number(button.dataset.key));code='';
+  clearTimeout(timer);timer=setTimeout(reset,15000);
+ };
+ button.addEventListener('animationend',event=>{if(event.target===button)button.classList.remove('greet');});
+ });
+ const onKey=(event:KeyboardEvent)=>{
+  if(event.key==='Escape'){reset();return;}
+  if(!armed || event.repeat || event.isComposing || event.ctrlKey || event.metaKey || event.altKey)return;
+  const target=event.target;
+  if(target instanceof HTMLElement && (target.closest('input,textarea,select') || target.isContentEditable))return;
+  if(event.key==='Backspace'){event.preventDefault();code=code.slice(0,-1);return;}
+  if(!/^[0-9]$/.test(event.key))return;
+  code+=event.key;
+  if(code.length===8){
+   const ok=state.submit(code);reset();
+   if(ok)revealTimeMachine();
+  }
+ };
+ document.addEventListener('keydown',onKey);
+ const onVisibility=()=>{if(document.hidden)reset();};
+ document.addEventListener('visibilitychange',onVisibility);
+ document.addEventListener('astro:before-swap',()=>{reset();document.removeEventListener('keydown',onKey);document.removeEventListener('visibilitychange',onVisibility);},{once:true});
+ } setup();document.addEventListener('astro:page-load',setup);
+</script>
