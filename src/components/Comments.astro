@@ -1,7 +1,85 @@
-<section class="comments" data-discussion data-post={Astro.url.pathname} aria-labelledby="comments-title">
- <p class="eyebrow">A little conversation</p><h2 id="comments-title">Join the conversation</h2>
- <p data-status role="status"></p><p><a href="/account/">Log in or create an account</a> to join in.</p>
- <div class="interaction-actions"><button data-vote="1">Like · 0</button><button data-vote="-1">Dislike · 0</button><button data-share>Share post</button></div>
- <form data-comment><label>Your comment<textarea name="body" required maxlength="5000" rows="3"></textarea></label><p data-reply-label></p><button>Post comment</button><button type="button" data-cancel-reply hidden>Cancel reply</button></form>
- <div data-threads></div>
+---
+import '@waline/client/style';
+import { walineURL } from '../lib/services';
+---
+<section class="comments waline-comments" aria-label="Comments" id="comments">
+ <div class="conversation-toolbar">
+  <p class="eyebrow">Comments</p>
+
+ </div>
+ <div data-waline data-server={walineURL} data-path={Astro.url.pathname}></div>
+ <p data-waline-status role="status"></p>
+ <noscript>Enable JavaScript to read and leave comments.</noscript>
 </section>
+<script>
+ import { syncWalineSession, saveWalineSession, validateWalineSession } from '../lib/waline-session';
+ import { startWalineLogin } from '../lib/waline-login';
+ import { init } from '@waline/client';
+ let instance:ReturnType<typeof init> | undefined;
+ let cancelLogin=()=>{};
+ function mount(){
+  const container=document.querySelector<HTMLElement>('[data-waline]');
+  if(!container || instance?.el===container)return;
+  instance?.destroy();
+  const status=document.querySelector<HTMLElement>('[data-waline-status]')!;
+  try {
+   instance=init({
+    el:container,
+    serverURL:container.dataset.server!,
+    path:container.dataset.path!,
+    lang:'en',
+    login:'force',
+    dark:'html:not(.light-mode)',
+    pageview:false,
+    reaction:[
+     'data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><text x="4" y="38" font-size="38">👍</text></svg>'),
+     'data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><text x="4" y="38" font-size="38">👎</text></svg>'),
+    ],
+    locale:{reactionTitle:'What do you think?',reaction0:'Like',reaction1:'Dislike'},
+   });
+   syncWalineSession();
+  } catch {status.textContent='Comments could not load. Please refresh to try again.';}
+  // Keep login from the comment box consistent with the Account page.
+  container.addEventListener('click',async event=>{
+   if(!(event.target instanceof Element))return;
+   const loginButton=event.target.closest<HTMLButtonElement>('.wl-info > button.wl-btn[type="button"]');
+   if(!loginButton)return;
+   event.preventDefault();event.stopImmediatePropagation();
+   cancelLogin();const pending=startWalineLogin(container.dataset.server!);cancelLogin=pending.cancel;
+   loginButton.disabled=true;
+   try{
+    const user=await pending.result;
+    if(!container.isConnected)return;
+    const verified=await validateWalineSession(container.dataset.server!,user.token);
+    if(!container.isConnected)return;
+    saveWalineSession({...verified,remember:user.remember});status.textContent='You’re now logged in.';
+   }catch(error:any){if(container.isConnected)status.textContent=error.message||'Login could not be completed.';}
+   finally{loginButton.disabled=false;}
+  },true);
+
+
+ }
+ document.addEventListener('astro:before-swap',()=>{cancelLogin();instance?.destroy();instance=undefined;});
+ document.addEventListener('astro:page-load',mount);
+ mount();
+</script>
+<style is:global>
+ .waline-comments {
+  --waline-font-size:1rem;
+  --waline-theme-color:var(--accent);
+  --waline-active-color:var(--accent);
+  --waline-text-color:var(--ink);
+  --waline-bg-color:var(--soft);
+  --waline-bg-color-light:var(--deep);
+  --waline-bg-color-hover:var(--raised);
+  --waline-border-color:var(--line);
+  --waline-info-color:var(--muted);
+  --waline-info-bg-color:var(--deep);
+  --waline-color:var(--ink);
+  --waline-border-radius:8px;
+ }
+ .waline-comments .wl-panel { margin-top:1.5rem; }
+ .conversation-toolbar { display:flex; justify-content:space-between; align-items:center; gap:1rem; margin-bottom:1.5rem; padding-bottom:1rem; border-bottom:1px solid var(--line); }
+ .conversation-toolbar .eyebrow { margin:0; font-size:.75rem; letter-spacing:.18em; color:var(--muted); }
+ .waline-comments [data-waline-status]:empty { display:none; }
+</style>

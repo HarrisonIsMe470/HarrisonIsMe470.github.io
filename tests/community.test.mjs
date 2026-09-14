@@ -18,8 +18,8 @@ test('accounts, ownership, threads, reactions, public stories, expiry and logout
  const request=async(path,method='GET',body,cookie)=>{const r=await fetch(base+path,{method,headers:{Origin:origin,...(body?{'Content-Type':'application/json'}:{}),...(cookie?{Cookie:cookie}:{})},body:body?JSON.stringify(body):undefined});return {status:r.status,data:await r.json(),cookie:r.headers.get('set-cookie')?.split(';')[0]};};
  try{
  assert.equal((await request('/stories')).status,200);
- for(const name of ['alice','bob'])assert.equal((await request('/auth/register','POST',{name,email:name+'@example.com',password:'a-long-test-password'})).status,201);
- const a=await request('/auth/login','POST',{email:'alice@example.com',password:'a-long-test-password'}),b=await request('/auth/login','POST',{email:'bob@example.com',password:'a-long-test-password'});
+ for(const name of ['alice','bob'])assert.equal((await request('/auth/register','POST',{name,email:name+'@example.com',password:'a'})).status,201);
+ const a=await request('/auth/login','POST',{email:'alice@example.com',password:'a'}),b=await request('/auth/login','POST',{email:'bob@example.com',password:'a'});
  assert.equal(a.status,200);assert.equal((await request('/stories','GET',null,a.cookie)).status,200);
  assert.equal((await request('/comments','POST',{post:'/blog/a/',body:'anonymous'})).status,401);
  const c=await request('/comments','POST',{post:'/blog/a/',body:'hello'},a.cookie);

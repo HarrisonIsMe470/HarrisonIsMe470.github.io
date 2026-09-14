@@ -5,7 +5,7 @@ The Astro site remains static on GitHub Pages. Deploy this directory on a Node 2
 1. Set `DATABASE_PATH` to a persistent, private absolute path, `SITE_ORIGIN=https://chino520.xyz`, `NODE_ENV=production`, and optionally `PORT=8787`.
 2. Run `node backend/server.mjs` under your host's process supervisor. It listens on loopback; proxy `https://api.chino520.xyz` to it. Use a same-site subdomain so SameSite=Lax session cookies work. Configure TLS, a 9 MB request limit, and request rate limits at the proxy. Back up the SQLite database with a SQLite-aware backup tool.
 3. Set the GitHub repository Actions variable `PUBLIC_API_URL` to `https://api.chino520.xyz` (the deployment workflow passes it into the build) and rebuild. This URL is public; never put credentials in PUBLIC variables.
-4. Time Machine requires no account: anyone who finds the page or API can read, create, and edit stories. The discovery sequence only hides its navigation link. Accounts at `/account/` are used for blog interactions. The legacy membership table and helper are retained for existing databases but no longer control story access.
+4. Time Machine requires no account: anyone who finds the page or API can read, create, and edit stories. The discovery sequence only hides its navigation link. Blog interactions now use the separate Waline server linked from `/account/`. The legacy membership table and helper are retained for existing databases but no longer control story access.
 
 For local development, run `node backend/server.mjs`, set `PUBLIC_API_URL=http://localhost:8787` in `.env`, and run `npm run dev -- --background`. Stop Astro with `npm run astro -- dev stop`.
 

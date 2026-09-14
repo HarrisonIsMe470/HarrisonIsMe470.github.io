@@ -1,0 +1,44 @@
+<div class="post-share" data-post-share data-path={Astro.url.pathname}>
+  <button type="button" data-waline-share aria-label="Share this post">
+   <svg class="share-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 3-7.5 18-3.5-7-7-3.5L21 3ZM21 3 10 14" /></svg>
+   <svg class="share-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6" /></svg>
+   <span data-share-label>Share</span>
+  </button>
+ <p class="share-status" data-share-status role="status"></p>
+</div>
+<script>
+ function setupShare(){
+  document.querySelectorAll<HTMLElement>('[data-post-share]').forEach(root=>{
+   if(root.dataset.ready)return;root.dataset.ready='true';
+   const share=root.querySelector<HTMLButtonElement>('[data-waline-share]')!;
+   const label=root.querySelector<HTMLElement>('[data-share-label]')!;
+   const status=root.querySelector<HTMLElement>('[data-share-status]')!;
+   share.onclick=async()=>{
+    share.disabled=true;share.dataset.copied='false';label.textContent='Share';status.textContent='';
+    try{
+     const url=location.origin+root.dataset.path;
+     if(navigator.share)await navigator.share({title:document.title,url});
+     else {await navigator.clipboard.writeText(url);share.dataset.copied='true';label.textContent='Copied';status.textContent='Post link copied.';}
+    }catch(error){if(!(error instanceof DOMException && error.name==='AbortError'))status.textContent='Could not share. Copy the address from your browser.';}
+    finally{share.disabled=false;}
+   };
+  });
+ }
+ setupShare();document.addEventListener('astro:page-load',setupShare);
+</script>
+<style is:global>
+ .post-share { flex-shrink:0; position:relative; }
+ .post-share .share-status { position:absolute; top:100%; right:0; width:220px; padding:.5rem .75rem; border:1px solid var(--line); border-radius:6px; background:var(--soft); color:var(--muted); font-size:.8125rem; z-index:2; margin:.25rem 0 0; }
+ .post-share .share-status:empty { display:none; }
+ .post-share [data-waline-share] { position:relative; display:inline-flex; flex-direction:row-reverse; align-items:center; gap:.75rem; min-height:44px; font:500 .875rem var(--font); color:var(--ink); background:none; border:0; border-radius:0; padding:.6rem .2rem .6rem .75rem; cursor:pointer; transition:color .2s; }
+ .post-share [data-waline-share]::after { content:''; position:absolute; bottom:4px; left:.75rem; right:.2rem; height:1px; background:var(--accent); transform:scaleX(0); transform-origin:left; transition:transform .25s ease; }
+ .post-share [data-waline-share] svg { color:var(--accent); transition:transform .25s ease; }
+ .post-share [data-waline-share]:hover { color:var(--accent); }
+ .post-share [data-waline-share]:hover::after { transform:scaleX(1); }
+ .post-share [data-waline-share]:hover .share-icon { transform:translate(2px,-2px); }
+ .post-share [data-waline-share]:focus-visible { outline:2px solid var(--accent); outline-offset:4px; border-radius:4px; }
+ .post-share [data-waline-share][data-copied=true] { color:var(--accent); }
+ .post-share .share-check,.post-share [data-copied=true] .share-icon { display:none; }
+ .post-share [data-copied=true] .share-check { display:block; }
+ @media(prefers-reduced-motion:reduce) { .post-share [data-waline-share],.post-share [data-waline-share]::after,.post-share [data-waline-share] svg { transition:none; } .post-share [data-waline-share]:hover .share-icon { transform:none; } }
+</style>

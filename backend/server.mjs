@@ -43,8 +43,10 @@ export function createApp({ database = process.env.DATABASE_PATH || 'backend/jou
     const key=req.socket.remoteAddress; const now=Date.now();
     for(const [k,v] of attempts) if(v.until<now) attempts.delete(k);
     const rate=attempts.get(key)||{count:0,until:now+600000}; attempts.set(key,rate); if(++rate.count>20) fail(429,'Too many attempts. Try again in ten minutes.');
-    const email=str(body.email,254).toLowerCase(), password=str(body.password,128);
-    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || password.length<12) fail(400,'Use a valid email and a password of at least 12 characters.');
+    const email=str(body.email,254).toLowerCase(), password=body.password;
+    if(typeof password!=='string' || !password.length) fail(400,'Please enter a password.');
+    if(Buffer.byteLength(password)>4096) fail(413,'Password is too large.');
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) fail(400,'Use a valid email address.');
     if(path.endsWith('register')) {
      const salt=randomBytes(16).toString('hex'), digest=(await derive(password,salt,64)).toString('hex');
      try {run('INSERT INTO users VALUES(?,?,?,?,?)',randomUUID(),email,str(body.name,80),salt,digest);} catch(e) {if(e.code?.includes('SQLITE')) fail(409,'Unable to register with this email.'); throw e;}

@@ -22,12 +22,12 @@ The initial site reused the starter dependencies. Content migration adds KaTeX f
 | `@astrojs/sitemap` | Existing official integration for sitemap generation. |
 | `sharp` | Existing local image processing used by Astro. |
 | `katex` | Renders the recovered LaTeX formulas without restoring the old theme runtime. |
-| Giscus | Comments **and Like buttons/counts** using GitHub Discussion reactions. One service handles both, with GitHub account-based persistence. |
+| Waline | Threaded comments, accounts, and article reactions via the configured Vercel server. |
 | GoatCounter | Hosted visitor collection and an embedded live chart; no local database, API token, chart dependency, or scheduled rebuild needed. |
 
 Astro’s [GitHub Pages guide](https://docs.astro.build/en/guides/deploy/github/),
 [Content Collections guide](https://docs.astro.build/en/guides/content-collections/),
-[Giscus configuration](https://giscus.app), and
+[Waline configuration](https://waline.js.org/en/guide/get-started/), and
 [GoatCounter embedding documentation](https://www.goatcounter.com/help/frame)
 are the upstream references for this setup. These services support static hosting;
 third-party accounts still need the configuration below.
@@ -132,33 +132,33 @@ MDX is already enabled. Use `.mdx` when you need imports and Astro components;
 plain Markdown is preferable for normal prose. The retained starter drafts show
 Markdown formatting and MDX examples.
 
-Keep published slugs stable: Giscus maps discussions by pathname. Renaming a file
-changes the URL and its discussion mapping; migrate the old discussion title and
+Keep published slugs stable: Waline maps discussions by pathname. Renaming a file
+changes the URL and its discussion mapping; migrate the old comment path and
 provide a redirect page if you change a published slug.
 
-## Comments and persistent likes: Giscus setup
+## Comments: Waline
 
-1. Keep this GitHub repository public and enable **Settings → General → Features → Discussions**.
-2. Install the [Giscus GitHub app](https://github.com/apps/giscus) with access to this repository.
-3. Create/select a Discussion category using the **Announcements** format.
-4. On https://giscus.app, enter `HarrisonIsMe470/HarrisonIsMe470.github.io`.
-   Select that category, pathname mapping, strict matching, and reactions enabled.
-5. Copy the generated `data-repo-id`, `data-category`, and `data-category-id` values
-   into `.env` as `PUBLIC_GISCUS_REPO_ID`, `PUBLIC_GISCUS_CATEGORY`, and
-   `PUBLIC_GISCUS_CATEGORY_ID`. These are public IDs, not credentials.
-6. Add the same values as repository **Settings → Secrets and variables → Actions → Variables**.
-7. Rebuild/redeploy. Open a post, sign in to GitHub within Giscus, and click the
-   **👍 reaction button** to like it. Reload or visit from another browser/account
-   to verify that the same count persists. Click again to remove your reaction.
-   Leave a comment and verify the discussion in GitHub.
+Blog comments use `@waline/client` with https://waline-for-astro.vercel.app.
+The URL is configured by default, so no extra GitHub variable is required.
+Optionally override it with `PUBLIC_WALINE_SERVER_URL` locally or as a GitHub Actions variable.
 
-The native Giscus reaction control is the Like button; there is no separate
-anonymous counter or localStorage total. Readers can see counts without signing
-in, but must authorize Giscus with GitHub to like or comment. GitHub stores the
-reactions and comments, and Giscus creates a missing discussion on first interaction.
-Until the IDs are supplied, a disabled Like button and an unavailable notice are
-shown. The normal GitHub Discussions link remains a fallback when an enabled
-embed is blocked. Moderate comments in GitHub Discussions.
+The widget supports threaded replies and Waline accounts, with login required in the client.
+In Vercel, set **LOGIN=force** and redeploy the Waline server to enforce this on the backend too.
+Set `SITE_URL=https://chino520.xyz` and `SITE_NAME=Harrison’s Journal` in that server's environment.
+Manage comments and accounts at https://waline-for-astro.vercel.app/ui.
+The Account page and comment login button use a small adapter around Waline's hosted login/message protocol, validates the returned token via `GET /api/token`, and shows the reader's avatar/name and a website logout button. It shares the client's `WALINE_USER` storage contract, including remember/session-only behavior, with the blog widget. Existing mobile token callbacks are validated and removed from the URL. New logins open a window or tab. Registration and password recovery use the same managed popup/tab flow and anonymous URL-token override as login. The website stays open; successful login in that Waline window synchronizes the session and closes it. The Account page has a Return to website control to close the window and restore focus. Waline's internal Back to home link still points to its own /ui; this integration does not rewrite links on the separate Vercel origin. Blocked or closed windows show a retry message; pending login times out after two minutes, while registration/recovery allow fifteen minutes. Logout clears the website's local Waline session. Each subsequent login opens `/ui/login?token=waline-login-required`: Waline admin gives this intentionally invalid, non-secret URL token priority over its remembered TOKEN, so it shows the credential form. This avoids automatically restoring the old account without attempting cross-origin storage deletion. It does not revoke tokens or log out unrelated Waline admin tabs. This compatibility adapter was checked against the deployed server 1.41.6 and current admin source; recheck URL-token precedence after upgrading the hosted admin UI. Replies are accepted only from the opened window at the configured Waline origin and the returned token is verified by the server.
+
+Each post uses its canonical pathname as its comment identifier. The widget is destroyed
+before Astro navigation and mounted for the next article, and follows the site's theme.
+Like/dislike reactions use Waline's reaction system; these are not the former account-bound
+votes. The Share button uses native sharing or copies the post URL.
+Existing custom-backend/Giscus accounts and comments are not automatically migrated.
+The old backend account/comment endpoints remain available for existing data; the website
+now uses that backend only for Time Machine stories.
+
+Validation: `npm run build` and `node --test tests/waline.test.mjs tests/waline-session.test.mjs tests/waline-login.test.mjs`; visit two different blog posts, use the theme toggle,
+and check each post loads its own Waline discussion. Check login and a test comment
+with an authorized account before relying on server-side login enforcement.
 
 ## Daily visitor statistics: GoatCounter setup
 
@@ -315,7 +315,7 @@ completed/verified. The existing live domain response does not verify the new bu
 - Keyboard navigation works; current navigation is marked; mobile layouts wrap.
 - Hearts are brief and disappear; reduced motion disables them.
 - Like a post using Giscus, reload, and verify the count in another session.
-- Leave a comment and find it in the matching GitHub Discussion.
+- Leave a comment and find it in the Waline dashboard.
 - Open `/stats/` signed out and confirm that the live daily chart is visible.
 - Confirm the Actions deployment completed and the custom domain shows this blog.
 
