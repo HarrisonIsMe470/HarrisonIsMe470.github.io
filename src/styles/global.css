@@ -141,6 +141,9 @@
                                                             gap:12px;
                                                             padding:32px}
                                                             .sidebar-brand img {
+                                                              width:72px;
+                                                              height:72px;
+                                                              object-fit:cover;
                                                               border-radius:50%;
                                                               border:1px solid var(--line)}
                                                               .sidebar-brand small {
@@ -564,8 +567,17 @@
                                                                                                                                                                                                                                                                         height:65px;
                                                                                                                                                                                                                                                                         z-index:50}
                                                                                                                                                                                                                                                                         .mobile-bar .brand {
+  display:flex;
+  align-items:center;
+  gap:10px;
                                                                                                                                                                                                                                                                           font-size:1.5rem}
-                                                                                                                                                                                                                                                                          .mobile-bar button {
+                                                                                                                                                                                                                                                                          .mobile-bar .brand img {
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  object-fit:cover;
+}
+.mobile-bar button {
                                                                                                                                                                                                                                                                             font-size:.75rem}
                                                                                                                                                                                                                                                                             .site-header {
                                                                                                                                                                                                                                                                               top:65px;
@@ -581,7 +593,8 @@
                                                                                                                                                                                                                                                                                     padding:20px 24px;
                                                                                                                                                                                                                                                                                     gap:6px}
                                                                                                                                                                                                                                                                                     .sidebar-brand img {
-                                                                                                                                                                                                                                                                                      display:none}
+                                                                                                                                                                                                                                                                                      width:48px;
+  height:48px}
                                                                                                                                                                                                                                                                                       .site-header nav {
                                                                                                                                                                                                                                                                                         padding:8px 0}
                                                                                                                                                                                                                                                                                         .site-header nav a {

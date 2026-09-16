@@ -1,11 +1,12 @@
 ---
 import HeaderLink from './HeaderLink.astro';
+import { profile } from '../data/profile';
 ---
 <a class="skip-link" href="#main">Skip to content</a>
-<div class="mobile-bar"><a href="/" class="brand">Harrison<span class="accent">.</span></a><button type="button" data-menu-toggle aria-controls="site-sidebar" aria-expanded="false">Menu</button></div>
+<div class="mobile-bar"><a href="/" class="brand"><img src={profile.avatar} width="36" height="36" alt="" /><span>Harrison<span class="accent">.</span></span></a><button type="button" data-menu-toggle aria-controls="site-sidebar" aria-expanded="false">Menu</button></div>
 <header class="site-header" id="site-sidebar">
   <p class="sidebar-welcome">Welcome to my universe</p>
-  <a class="brand sidebar-brand" href="/" aria-label="Harrison’s Universe, home"><img src="/images/avatar.jpg" width="72" height="72" alt="" /><span>Harrison<span class="accent">.</span></span><small>A personal universe</small></a>
+  <a class="brand sidebar-brand" href="/" aria-label="Harrison’s Universe, home"><img src={profile.avatar} width="72" height="72" alt={`${profile.name}’s avatar`} /><span>Harrison<span class="accent">.</span></span><small>A personal universe</small></a>
   <nav aria-label="Main navigation">
     <HeaderLink href="/"><span>01</span> Home</HeaderLink><HeaderLink href="/blog/"><span>02</span> Blog</HeaderLink>
     <HeaderLink href="/projects/"><span>03</span> Projects</HeaderLink><HeaderLink href="/about/"><span>04</span> About</HeaderLink>
